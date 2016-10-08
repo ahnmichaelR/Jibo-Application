@@ -117,7 +117,7 @@
             "getOptions": [
                 "() => {",
                 "    let options = {",
-                "        heyJibo: true,",
+                "        heyJibo: false,",
                 "        detectEnd: false,",
                 "        incremental: false,",
                 "        authenticateSpeaker: ''",
@@ -128,8 +128,9 @@
             "rule": "action.rule",
             "onResult": [
                 "(listener) => {",
-                "  notepad.whatNext = 'neither';",
+                "",
                 "  listener.on('cloud', function(asrResult, speakerIds) {",
+                "  console.log(asrResult);",
                 "      notepad.whatNext = asrResult.NLParse.what;",
                 "  });",
                 "}"
