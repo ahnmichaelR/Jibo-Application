@@ -4,25 +4,9 @@
         "class": "Sequence",
         "name": "",
         "options": {},
-        "children": [
-            "7394a711-7a72-48c1-85c8-cf8db79d3f54"
-        ]
+        "children": []
     },
     "meta": {
         "version": 1
-    },
-    "7394a711-7a72-48c1-85c8-cf8db79d3f54": {
-        "id": "7394a711-7a72-48c1-85c8-cf8db79d3f54",
-        "class": "ExecuteScript",
-        "name": "",
-        "options": {
-            "exec": [
-                "() => {",
-                "  console.log(Math.floor((Math.random()*3)+1));",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": 1
     }
 }

@@ -6,7 +6,7 @@
         "options": {},
         "children": [
             "18e9b274-b42f-4a54-bfb6-0f0bddf630f4",
-            "e7628809-df98-42ae-9413-60066d23927b",
+            "369d434e-ec86-4355-9334-b4aafa7ba823",
             "f27fb4c5-6cca-4004-b163-6c6cea303ca7"
         ]
     },
@@ -81,7 +81,6 @@
     "3dc1bef6-7abf-49d0-8696-ab96ccb4a471": {
         "id": "3dc1bef6-7abf-49d0-8696-ab96ccb4a471",
         "class": "Case",
-        "name": "",
         "options": {
             "conditional": [
                 "() => {",
@@ -99,35 +98,12 @@
         "asset-pack": "core",
         "parent": "f27fb4c5-6cca-4004-b163-6c6cea303ca7",
         "children": [
-            "dba75822-17d7-4329-8887-3eb569d2173b",
-            "24cdb0b7-0a51-4480-b6e1-93db02df71a1"
+            "3e85d9b0-d746-408c-aa11-3579e2a80591",
+            "e206e935-f8a4-4028-94d5-6b92f31c88b5"
         ],
         "decorators": [
             "3dc1bef6-7abf-49d0-8696-ab96ccb4a471"
         ]
-    },
-    "dba75822-17d7-4329-8887-3eb569d2173b": {
-        "id": "dba75822-17d7-4329-8887-3eb569d2173b",
-        "class": "ExecuteScript",
-        "name": "",
-        "options": {
-            "exec": [
-                "() => {",
-                "  console.log(\"agdhosghoa\");",
-                "  jibo.sound.add()",
-                "  notepad.sound = jibo.sound.add('man',{",
-                "    src: 'audio/Ill-Make-A-Man-Out-Of-You-Mulan-lyrics.mp3',  // location in file system",
-                "    preload: true,              // start loading the sound right away?",
-                "    autoPlay: true,             // start playing the sound immediately after loading?",
-                "    loop: false,                // loop my sound? (false by default)",
-                "    block: false,                // allow other sounds to play over this sound? (false by default)",
-                "    // useXHR: true,  //commented out, neccesary to use if your src is set to an external URL",
-                "  });",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": "daacb9e2-4bf0-4506-964c-d927caf23703"
     },
     "18e9b274-b42f-4a54-bfb6-0f0bddf630f4": {
         "id": "18e9b274-b42f-4a54-bfb6-0f0bddf630f4",
@@ -142,53 +118,6 @@
         },
         "asset-pack": "core",
         "parent": 1
-    },
-    "e7628809-df98-42ae-9413-60066d23927b": {
-        "id": "e7628809-df98-42ae-9413-60066d23927b",
-        "class": "Listen",
-        "name": "",
-        "options": {
-            "getOptions": [
-                "() => {",
-                "    let options = {",
-                "        heyJibo: false,",
-                "        detectEnd: false,",
-                "        incremental: false,",
-                "        authenticateSpeaker: ''",
-                "    }",
-                "    return options;",
-                "}"
-            ],
-            "rule": "music-number.rule",
-            "onResult": [
-                "(listener) => {",
-                "    listener.on('cloud', function(asrResult, speakerIds) {",
-                "        notepad.whatNext = asrResult.NLParse.what;",
-                "    });",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": 1
-    },
-    "24cdb0b7-0a51-4480-b6e1-93db02df71a1": {
-        "id": "24cdb0b7-0a51-4480-b6e1-93db02df71a1",
-        "class": "Subtree",
-        "name": "",
-        "options": {
-            "behaviorPath": "actions.bt",
-            "getNotepad": [
-                "() => {",
-                "    return {};",
-                "}"
-            ],
-            "onResult": [
-                "(treeResult) => {",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": "daacb9e2-4bf0-4506-964c-d927caf23703"
     },
     "30b9a22d-7c43-4fa0-866b-73b1967a2501": {
         "id": "30b9a22d-7c43-4fa0-866b-73b1967a2501",
@@ -208,5 +137,76 @@
         },
         "asset-pack": "core",
         "parent": "68a47d95-f0ce-402d-b9c5-5251854195af"
+    },
+    "369d434e-ec86-4355-9334-b4aafa7ba823": {
+        "id": "369d434e-ec86-4355-9334-b4aafa7ba823",
+        "class": "Listen",
+        "name": "",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "music-number.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "      notepad.whatNext = asrResult.NLParse.what;",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    },
+    "e206e935-f8a4-4028-94d5-6b92f31c88b5": {
+        "id": "e206e935-f8a4-4028-94d5-6b92f31c88b5",
+        "class": "Subtree",
+        "name": "",
+        "options": {
+            "behaviorPath": "actions.bt",
+            "getNotepad": [
+                "() => {",
+                "    return {};",
+                "}"
+            ],
+            "onResult": [
+                "(treeResult) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "daacb9e2-4bf0-4506-964c-d927caf23703"
+    },
+    "3e85d9b0-d746-408c-aa11-3579e2a80591": {
+        "id": "3e85d9b0-d746-408c-aa11-3579e2a80591",
+        "class": "PlayAnimation",
+        "name": "",
+        "options": {
+            "animPath": "music.keys",
+            "config": [
+                "(animation) => {",
+                "  console.log(\"asdgasgasghfsg\")",
+                "  jibo.sound.add()",
+                "  notepad.sound = jibo.sound.add('man',{",
+                "    src: 'audio/Ill-Make-A-Man-Out-Of-You-Mulan-lyrics.mp3',  // location in file system",
+                "    preload: true,              // start loading the sound right away?",
+                "    autoPlay: true,             // start playing the sound immediately after loading?",
+                "    loop: false,                // loop my sound? (false by default)",
+                "    block: true,                // allow other sounds to play over this sound? (false by default)",
+                "    // useXHR: true,  //commented out, neccesary to use if your src is set to an external URL",
+                "  });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "daacb9e2-4bf0-4506-964c-d927caf23703"
     }
 }
