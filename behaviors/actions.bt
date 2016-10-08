@@ -5,6 +5,7 @@
         "name": "",
         "options": {},
         "children": [
+            "52f5ad88-53c6-4e09-b779-a4698d8a0464",
             "a543b70b-e056-4332-a6f4-de36a2d0c49e"
         ]
     },
@@ -19,13 +20,11 @@
         "asset-pack": "core",
         "parent": 1,
         "children": [
-            "5a912c49-ffbf-4caf-9fa7-05a6868583a1",
             "45b97d42-60a7-4c5f-a76e-8a3e2b9c1bc3",
-            "92906990-6c4a-4a11-aa84-cfa4cf2b2377"
+            "92906990-6c4a-4a11-aa84-cfa4cf2b2377",
+            "76edc5e0-5ea7-41d0-bf7a-15296acfae7c"
         ],
-        "decorators": [
-            "4c906393-8f24-442e-a402-01bd16c5083c"
-        ]
+        "decorators": []
     },
     "92906990-6c4a-4a11-aa84-cfa4cf2b2377": {
         "id": "92906990-6c4a-4a11-aa84-cfa4cf2b2377",
@@ -120,7 +119,7 @@
             "getOptions": [
                 "() => {",
                 "    let options = {",
-                "        heyJibo: false,",
+                "        heyJibo: true,",
                 "        detectEnd: false,",
                 "        incremental: false,",
                 "        authenticateSpeaker: ''",
@@ -131,6 +130,7 @@
             "rule": "action.rule",
             "onResult": [
                 "(listener) => {",
+                "  notepad.whatNext = 'neither';",
                 "  listener.on('cloud', function(asrResult, speakerIds) {",
                 "      notepad.whatNext = asrResult.NLParse.what;",
                 "  });",
@@ -139,9 +139,7 @@
         },
         "asset-pack": "core",
         "parent": "a543b70b-e056-4332-a6f4-de36a2d0c49e",
-        "decorators": [
-            "db072b50-99cc-4063-9334-c47de1655365"
-        ]
+        "decorators": []
     },
     "abec1885-2636-4184-94f9-0081eb6bc204": {
         "id": "abec1885-2636-4184-94f9-0081eb6bc204",
@@ -162,9 +160,31 @@
         "asset-pack": "core",
         "parent": "c8c27e38-d262-4f5c-a5d2-841b058d4b86"
     },
-    "4c906393-8f24-442e-a402-01bd16c5083c": {
-        "id": "4c906393-8f24-442e-a402-01bd16c5083c",
-        "class": "WhileCondition",
+    "76edc5e0-5ea7-41d0-bf7a-15296acfae7c": {
+        "id": "76edc5e0-5ea7-41d0-bf7a-15296acfae7c",
+        "class": "Subtree",
+        "name": "",
+        "options": {
+            "behaviorPath": "actions.bt",
+            "getNotepad": [
+                "() => {",
+                "    return {};",
+                "}"
+            ],
+            "onResult": [
+                "(treeResult) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "a543b70b-e056-4332-a6f4-de36a2d0c49e",
+        "decorators": [
+            "9984ab5d-c23a-4529-ac16-77ef6b8c2abd"
+        ]
+    },
+    "9984ab5d-c23a-4529-ac16-77ef6b8c2abd": {
+        "id": "9984ab5d-c23a-4529-ac16-77ef6b8c2abd",
+        "class": "SucceedOnCondition",
         "name": "",
         "options": {
             "init": [
@@ -173,33 +193,24 @@
             ],
             "conditional": [
                 "() => {",
-                "    return true;",
+                "  return notepad.whatNext != 'karaoke'|notepad.whatNext != 'music';",
                 "}"
             ]
         },
         "asset-pack": "core"
     },
-    "db072b50-99cc-4063-9334-c47de1655365": {
-        "id": "db072b50-99cc-4063-9334-c47de1655365",
-        "class": "TimeoutSucceed",
-        "name": "",
-        "options": {
-            "timeout": 5000000
-        },
-        "asset-pack": "core"
-    },
-    "5a912c49-ffbf-4caf-9fa7-05a6868583a1": {
-        "id": "5a912c49-ffbf-4caf-9fa7-05a6868583a1",
+    "52f5ad88-53c6-4e09-b779-a4698d8a0464": {
+        "id": "52f5ad88-53c6-4e09-b779-a4698d8a0464",
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "Welcome",
+            "words": "test",
             "onWord": [
                 "(word) => {",
                 "}"
             ]
         },
         "asset-pack": "core",
-        "parent": "a543b70b-e056-4332-a6f4-de36a2d0c49e"
+        "parent": 1
     }
 }

@@ -7,7 +7,7 @@
         "children": [
             "00da5e6d-2afb-4c77-8eec-28bb2f368080",
             "0410b399-85d5-49ec-a7a8-f5cc9636d4be",
-            "fe58e73f-63be-429b-8a81-68e77eea4b49"
+            "f0b44e2d-3cbb-4b80-a837-b06bcab1eb83"
         ]
     },
     "meta": {
@@ -18,7 +18,7 @@
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "What song? (Karaoke)\nOne. Make A Man Out of You in Mulan\nTwo. Never Gonna Give You Up by Rick Astley",
+            "words": "What song? (Music)\nOne. Make A Man Out of You in Mulan\nTwo. Never Gonna Give You Up by Rick Astley",
             "onWord": [
                 "(word) => {",
                 "}"
@@ -55,20 +55,46 @@
         "asset-pack": "core",
         "parent": 1
     },
-    "fe58e73f-63be-429b-8a81-68e77eea4b49": {
-        "id": "fe58e73f-63be-429b-8a81-68e77eea4b49",
+    "f0b44e2d-3cbb-4b80-a837-b06bcab1eb83": {
+        "id": "f0b44e2d-3cbb-4b80-a837-b06bcab1eb83",
+        "class": "Parallel",
+        "name": "",
+        "options": {
+            "succeedOnOne": false
+        },
+        "asset-pack": "core",
+        "parent": 1,
+        "children": [
+            "d562a29c-8678-4563-b179-dcabded01177",
+            "f57a8416-c12d-4197-a689-3eeaccbfefef"
+        ]
+    },
+    "f57a8416-c12d-4197-a689-3eeaccbfefef": {
+        "id": "f57a8416-c12d-4197-a689-3eeaccbfefef",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "f0b44e2d-3cbb-4b80-a837-b06bcab1eb83",
+        "children": [
+            "34e0cbd1-a6e6-44cb-90fc-e953b9e124aa"
+        ],
+        "decorators": []
+    },
+    "34e0cbd1-a6e6-44cb-90fc-e953b9e124aa": {
+        "id": "34e0cbd1-a6e6-44cb-90fc-e953b9e124aa",
         "class": "Switch",
         "name": "",
         "options": {},
         "asset-pack": "core",
-        "parent": 1,
+        "parent": "f57a8416-c12d-4197-a689-3eeaccbfefef",
         "children": [
-            "09f72bb6-d1f6-4d34-afa9-79369b240bc6",
-            "c3004ad4-a205-4b34-b0ab-f853b796eed1"
+            "86a54133-7cac-4b40-93e1-5541a48a7ca0",
+            "07715210-2aed-47ed-b5ae-37e12cb9cd10"
         ]
     },
-    "a2d67d45-645e-444e-bf04-a7b10b3a9df1": {
-        "id": "a2d67d45-645e-444e-bf04-a7b10b3a9df1",
+    "e494cbaa-9be5-4003-a456-6da2e4644ae8": {
+        "id": "e494cbaa-9be5-4003-a456-6da2e4644ae8",
         "class": "Case",
         "name": "",
         "options": {
@@ -80,112 +106,145 @@
         },
         "asset-pack": "core"
     },
-    "c3004ad4-a205-4b34-b0ab-f853b796eed1": {
-        "id": "c3004ad4-a205-4b34-b0ab-f853b796eed1",
+    "07715210-2aed-47ed-b5ae-37e12cb9cd10": {
+        "id": "07715210-2aed-47ed-b5ae-37e12cb9cd10",
         "class": "Sequence",
         "name": "",
         "options": {},
         "asset-pack": "core",
-        "parent": "fe58e73f-63be-429b-8a81-68e77eea4b49",
+        "parent": "34e0cbd1-a6e6-44cb-90fc-e953b9e124aa",
         "children": [
-            "b9e2c8b6-de6d-4e31-889a-7eeca97f4aad"
+            "d2fd8b5e-9d4f-44bb-85b0-1bee4510ca86"
         ],
         "decorators": [
-            "a2d67d45-645e-444e-bf04-a7b10b3a9df1"
+            "e494cbaa-9be5-4003-a456-6da2e4644ae8"
         ]
     },
-    "78cec0ee-ea8b-49a4-83cd-e5ae92cbed29": {
-        "id": "78cec0ee-ea8b-49a4-83cd-e5ae92cbed29",
-        "class": "Case",
+    "d582cf50-563e-4ffe-adb2-bb13e71eb4cf": {
+        "id": "d582cf50-563e-4ffe-adb2-bb13e71eb4cf",
+        "class": "SucceedOnCondition",
         "name": "",
         "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
             "conditional": [
                 "() => {",
-                "  return notepad.whatNext == 'one'",
+                "  return notepad.whatNext == 'stop' | notepad.whatNext == 'pause';",
                 "}"
             ]
         },
         "asset-pack": "core"
     },
-    "09f72bb6-d1f6-4d34-afa9-79369b240bc6": {
-        "id": "09f72bb6-d1f6-4d34-afa9-79369b240bc6",
+    "d2fd8b5e-9d4f-44bb-85b0-1bee4510ca86": {
+        "id": "d2fd8b5e-9d4f-44bb-85b0-1bee4510ca86",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "NeverGonnaGive.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "07715210-2aed-47ed-b5ae-37e12cb9cd10",
+        "decorators": [
+            "d582cf50-563e-4ffe-adb2-bb13e71eb4cf"
+        ]
+    },
+    "bf0931c7-630c-4fa6-b95c-90c485d97c24": {
+        "id": "bf0931c7-630c-4fa6-b95c-90c485d97c24",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'one';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "86a54133-7cac-4b40-93e1-5541a48a7ca0": {
+        "id": "86a54133-7cac-4b40-93e1-5541a48a7ca0",
         "class": "Sequence",
         "name": "",
         "options": {},
         "asset-pack": "core",
-        "parent": "fe58e73f-63be-429b-8a81-68e77eea4b49",
+        "parent": "34e0cbd1-a6e6-44cb-90fc-e953b9e124aa",
         "children": [
-            "588bf751-2874-4cd7-9176-dd3068b86ffe",
-            "e2b10dac-3efc-492f-86f7-fb5f4713b489"
+            "cd66e55d-be0a-4799-aaf6-9c4fbdb5a5cf"
         ],
         "decorators": [
-            "78cec0ee-ea8b-49a4-83cd-e5ae92cbed29"
+            "bf0931c7-630c-4fa6-b95c-90c485d97c24"
         ]
     },
-    "b9e2c8b6-de6d-4e31-889a-7eeca97f4aad": {
-        "id": "b9e2c8b6-de6d-4e31-889a-7eeca97f4aad",
-        "class": "ExecuteScript",
+    "8d135057-d7a8-47d0-ba54-1563fd0c9f5f": {
+        "id": "8d135057-d7a8-47d0-ba54-1563fd0c9f5f",
+        "class": "SucceedOnCondition",
         "name": "",
         "options": {
-            "exec": [
+            "init": [
                 "() => {",
-                "  console.log(\"asdgasgasghfsg\")",
-                "  jibo.sound.add()",
-                "  notepad.sound = jibo.sound.add('never',{",
-                "    src: 'audio/Karaoke-Never-Gonna-Give-You-Up-Rick-Astley-.mp3',  // location in file system",
-                "    preload: true,              // start loading the sound right away?",
-                "    autoPlay: true,             // start playing the sound immediately after loading?",
-                "    loop: false,                // loop my sound? (false by default)",
-                "    block: false,                // allow other sounds to play over this sound? (false by default)",
-                "    // useXHR: true,  //commented out, neccesary to use if your src is set to an external URL",
-                "  });",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": "c3004ad4-a205-4b34-b0ab-f853b796eed1"
-    },
-    "588bf751-2874-4cd7-9176-dd3068b86ffe": {
-        "id": "588bf751-2874-4cd7-9176-dd3068b86ffe",
-        "class": "PlayAnimation",
-        "name": "",
-        "options": {
-            "animPath": "music.keys",
-            "config": [
-                "(animation) => {",
-                "  console.log(\"agdhosghoa\");",
-                "  jibo.sound.add()",
-                "  notepad.sound = jibo.sound.add('man',{",
-                "    src: 'audio/Ill-Make-A-Man-Out-Of-You-Mulan-lyrics.mp3',  // location in file system",
-                "    preload: true,              // start loading the sound right away?",
-                "    autoPlay: true,             // start playing the sound immediately after loading?",
-                "    loop: false,                // loop my sound? (false by default)",
-                "    block: false,                // allow other sounds to play over this sound? (false by default)",
-                "    // useXHR: true,  //commented out, neccesary to use if your src is set to an external URL",
-                "  });",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": "09f72bb6-d1f6-4d34-afa9-79369b240bc6"
-    },
-    "e2b10dac-3efc-492f-86f7-fb5f4713b489": {
-        "id": "e2b10dac-3efc-492f-86f7-fb5f4713b489",
-        "class": "Subtree",
-        "name": "",
-        "options": {
-            "behaviorPath": "actions.bt",
-            "getNotepad": [
-                "() => {",
-                "    return {};",
                 "}"
             ],
+            "conditional": [
+                "() => {",
+                "    return notepad.whatNext == 'stop' | notepad.whatNext == 'pause';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "cd66e55d-be0a-4799-aaf6-9c4fbdb5a5cf": {
+        "id": "cd66e55d-be0a-4799-aaf6-9c4fbdb5a5cf",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "Ill-Make-A-Man-Out-Of-You-Mulan-lyrics.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "86a54133-7cac-4b40-93e1-5541a48a7ca0",
+        "decorators": [
+            "8d135057-d7a8-47d0-ba54-1563fd0c9f5f"
+        ]
+    },
+    "d562a29c-8678-4563-b179-dcabded01177": {
+        "id": "d562a29c-8678-4563-b179-dcabded01177",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "f0b44e2d-3cbb-4b80-a837-b06bcab1eb83",
+        "children": [
+            "87374502-b227-49c6-afbd-4fca89ca7290"
+        ],
+        "decorators": []
+    },
+    "87374502-b227-49c6-afbd-4fca89ca7290": {
+        "id": "87374502-b227-49c6-afbd-4fca89ca7290",
+        "class": "Listen",
+        "name": "",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "stop.rule",
             "onResult": [
-                "(treeResult) => {",
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "        notepad.whatNext = asrResult.NLParse.what;",
+                "    });",
                 "}"
             ]
         },
         "asset-pack": "core",
-        "parent": "09f72bb6-d1f6-4d34-afa9-79369b240bc6"
+        "parent": "d562a29c-8678-4563-b179-dcabded01177"
     }
 }

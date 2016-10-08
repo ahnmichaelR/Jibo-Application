@@ -7,7 +7,7 @@
         "children": [
             "00da5e6d-2afb-4c77-8eec-28bb2f368080",
             "0410b399-85d5-49ec-a7a8-f5cc9636d4be",
-            "fe58e73f-63be-429b-8a81-68e77eea4b49"
+            "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0"
         ]
     },
     "meta": {
@@ -18,7 +18,7 @@
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "What song? (Karaoke)\nOne. Make A Man Out of You in Mulan\nTwo. Never Gonna Give You Up by Rick Astley",
+            "words": "What song? (Karaoke) \nOne. Make A Man Out of You in Mulan \nTwo. Never Gonna Give You Up by Rick Astley",
             "onWord": [
                 "(word) => {",
                 "}"
@@ -61,7 +61,7 @@
         "name": "",
         "options": {},
         "asset-pack": "core",
-        "parent": 1,
+        "parent": "35503ff5-5dc8-46c1-a5e5-c90f851b5263",
         "children": [
             "09f72bb6-d1f6-4d34-afa9-79369b240bc6",
             "c3004ad4-a205-4b34-b0ab-f853b796eed1"
@@ -88,7 +88,7 @@
         "asset-pack": "core",
         "parent": "fe58e73f-63be-429b-8a81-68e77eea4b49",
         "children": [
-            "b9e2c8b6-de6d-4e31-889a-7eeca97f4aad"
+            "64c86e5e-34bf-4e90-a5f7-32444a340b0f"
         ],
         "decorators": [
             "a2d67d45-645e-444e-bf04-a7b10b3a9df1"
@@ -101,7 +101,7 @@
         "options": {
             "conditional": [
                 "() => {",
-                "  return notepad.whatNext == 'one'",
+                "  return notepad.whatNext == 'one';",
                 "}"
             ]
         },
@@ -115,56 +115,156 @@
         "asset-pack": "core",
         "parent": "fe58e73f-63be-429b-8a81-68e77eea4b49",
         "children": [
-            "93e56f19-013a-4dfa-869a-6208ae730d13"
+            "450809f9-010a-4a6f-9a84-e0a593876e5d"
         ],
         "decorators": [
             "78cec0ee-ea8b-49a4-83cd-e5ae92cbed29"
         ]
     },
-    "93e56f19-013a-4dfa-869a-6208ae730d13": {
-        "id": "93e56f19-013a-4dfa-869a-6208ae730d13",
-        "class": "ExecuteScript",
+    "450809f9-010a-4a6f-9a84-e0a593876e5d": {
+        "id": "450809f9-010a-4a6f-9a84-e0a593876e5d",
+        "class": "PlayAudio",
         "name": "",
         "options": {
-            "exec": [
-                "() => {",
-                "  console.log(\"agdhosghoa\");",
-                "  jibo.sound.add()",
-                "  notepad.sound = jibo.sound.add('man',{",
-                "    src: 'audio/MakeAMan.mp3',  // location in file system",
-                "    preload: true,              // start loading the sound right away?",
-                "    autoPlay: true,             // start playing the sound immediately after loading?",
-                "    loop: false,                // loop my sound? (false by default)",
-                "    block: false,                // allow other sounds to play over this sound? (false by default)",
-                "    // useXHR: true,  //commented out, neccesary to use if your src is set to an external URL",
-                "  });",
-                "}"
-            ]
+            "audioPath": "MakeAMan.mp3"
         },
         "asset-pack": "core",
-        "parent": "09f72bb6-d1f6-4d34-afa9-79369b240bc6"
+        "parent": "09f72bb6-d1f6-4d34-afa9-79369b240bc6",
+        "decorators": [
+            "de5ebaf5-e15b-4e2d-8c09-b8d4e28e9a56"
+        ]
     },
-    "b9e2c8b6-de6d-4e31-889a-7eeca97f4aad": {
-        "id": "b9e2c8b6-de6d-4e31-889a-7eeca97f4aad",
-        "class": "ExecuteScript",
+    "64c86e5e-34bf-4e90-a5f7-32444a340b0f": {
+        "id": "64c86e5e-34bf-4e90-a5f7-32444a340b0f",
+        "class": "PlayAudio",
         "name": "",
         "options": {
-            "exec": [
+            "audioPath": "Karaoke-Never-Gonna-Give-You-Up-Rick-Astley-.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "c3004ad4-a205-4b34-b0ab-f853b796eed1",
+        "decorators": [
+            "2b872e4c-e3b7-4c8b-94f1-292f10b09d0a"
+        ]
+    },
+    "35503ff5-5dc8-46c1-a5e5-c90f851b5263": {
+        "id": "35503ff5-5dc8-46c1-a5e5-c90f851b5263",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0",
+        "children": [
+            "fe58e73f-63be-429b-8a81-68e77eea4b49"
+        ],
+        "decorators": []
+    },
+    "4f9852bf-9df0-4623-bba6-7e752a7b739c": {
+        "id": "4f9852bf-9df0-4623-bba6-7e752a7b739c",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0",
+        "children": [
+            "b963d37a-d46e-43f8-a70b-cfc37ab9726d"
+        ],
+        "decorators": [
+            "08b36dad-c6d6-4a11-8508-3bc0eb6a8d4f"
+        ]
+    },
+    "b963d37a-d46e-43f8-a70b-cfc37ab9726d": {
+        "id": "b963d37a-d46e-43f8-a70b-cfc37ab9726d",
+        "class": "Listen",
+        "name": "",
+        "options": {
+            "getOptions": [
                 "() => {",
-                "  console.log(\"asdgasgasghfsg\")",
-                "  jibo.sound.add()",
-                "  notepad.sound = jibo.sound.add('never',{",
-                "    src: 'audio/Karaoke-Never-Gonna-Give-You-Up-Rick-Astley-.mp3',  // location in file system",
-                "    preload: true,              // start loading the sound right away?",
-                "    autoPlay: true,             // start playing the sound immediately after loading?",
-                "    loop: false,                // loop my sound? (false by default)",
-                "    block: false,                // allow other sounds to play over this sound? (false by default)",
-                "    // useXHR: true,  //commented out, neccesary to use if your src is set to an external URL",
-                "  });",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "stop.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "        notepad.whatNext = asrResult.NLParse.what;",
+                "    });",
                 "}"
             ]
         },
         "asset-pack": "core",
-        "parent": "c3004ad4-a205-4b34-b0ab-f853b796eed1"
+        "parent": "4f9852bf-9df0-4623-bba6-7e752a7b739c",
+        "decorators": []
+    },
+    "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0": {
+        "id": "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0",
+        "class": "Parallel",
+        "name": "",
+        "options": {
+            "succeedOnOne": false
+        },
+        "asset-pack": "core",
+        "parent": 1,
+        "children": [
+            "4f9852bf-9df0-4623-bba6-7e752a7b739c",
+            "35503ff5-5dc8-46c1-a5e5-c90f851b5263"
+        ]
+    },
+    "de5ebaf5-e15b-4e2d-8c09-b8d4e28e9a56": {
+        "id": "de5ebaf5-e15b-4e2d-8c09-b8d4e28e9a56",
+        "class": "SucceedOnCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "    return notepad.whatNext == 'stop' | notepad.whatNext == 'pause';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "2b872e4c-e3b7-4c8b-94f1-292f10b09d0a": {
+        "id": "2b872e4c-e3b7-4c8b-94f1-292f10b09d0a",
+        "class": "SucceedOnCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'stop' | notepad.whatNext == 'pause';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "08b36dad-c6d6-4a11-8508-3bc0eb6a8d4f": {
+        "id": "08b36dad-c6d6-4a11-8508-3bc0eb6a8d4f",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "    return notepad.whatNext != 'stop' | notepad.whatNext != 'pause';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
     }
 }

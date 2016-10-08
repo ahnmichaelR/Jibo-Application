@@ -1,4 +1,4 @@
-TopRule = i want to $*
+TopRule = i want $*
 karaoke {what = 'karaoke'}|
 music {what = 'music'}|
 $* {what = 'undefined'}

@@ -27,6 +27,14 @@
             "visible": true,
             "locked": false,
             "keyframes": []
+        },
+        {
+            "id": "2e8eddd6488c4463b59bac5e81b8ba84",
+            "name": "Audio Event",
+            "type": "Audio Event",
+            "visible": true,
+            "locked": false,
+            "keyframes": []
         }
     ]
 }
