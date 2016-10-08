@@ -1,0 +1,174 @@
+{
+    "1": {
+        "id": 1,
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "children": [
+            "18e9b274-b42f-4a54-bfb6-0f0bddf630f4",
+            "e7628809-df98-42ae-9413-60066d23927b",
+            "f27fb4c5-6cca-4004-b163-6c6cea303ca7"
+        ]
+    },
+    "meta": {
+        "version": 1
+    },
+    "f27fb4c5-6cca-4004-b163-6c6cea303ca7": {
+        "id": "f27fb4c5-6cca-4004-b163-6c6cea303ca7",
+        "class": "Switch",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": 1,
+        "children": [
+            "daacb9e2-4bf0-4506-964c-d927caf23703",
+            "68a47d95-f0ce-402d-b9c5-5251854195af"
+        ]
+    },
+    "c0202fc0-baaa-4b8e-9442-fa243860d93a": {
+        "id": "c0202fc0-baaa-4b8e-9442-fa243860d93a",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'two'",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "68a47d95-f0ce-402d-b9c5-5251854195af": {
+        "id": "68a47d95-f0ce-402d-b9c5-5251854195af",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "f27fb4c5-6cca-4004-b163-6c6cea303ca7",
+        "children": [
+            "0674d582-7d30-4118-987e-122c3f23236c",
+            "3259fc26-03ac-4bef-b8a9-746a96339299"
+        ],
+        "decorators": [
+            "c0202fc0-baaa-4b8e-9442-fa243860d93a"
+        ]
+    },
+    "3259fc26-03ac-4bef-b8a9-746a96339299": {
+        "id": "3259fc26-03ac-4bef-b8a9-746a96339299",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "NeverGonnaGive.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "68a47d95-f0ce-402d-b9c5-5251854195af"
+    },
+    "0674d582-7d30-4118-987e-122c3f23236c": {
+        "id": "0674d582-7d30-4118-987e-122c3f23236c",
+        "class": "ExecuteScript",
+        "name": "",
+        "options": {
+            "exec": [
+                "() => {",
+                "  console.log(\"asdgasgasghfsg\")",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "68a47d95-f0ce-402d-b9c5-5251854195af"
+    },
+    "3dc1bef6-7abf-49d0-8696-ab96ccb4a471": {
+        "id": "3dc1bef6-7abf-49d0-8696-ab96ccb4a471",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'one'",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "daacb9e2-4bf0-4506-964c-d927caf23703": {
+        "id": "daacb9e2-4bf0-4506-964c-d927caf23703",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "f27fb4c5-6cca-4004-b163-6c6cea303ca7",
+        "children": [
+            "dba75822-17d7-4329-8887-3eb569d2173b",
+            "d92a2266-56ad-40c0-ab4b-823892b5805d"
+        ],
+        "decorators": [
+            "3dc1bef6-7abf-49d0-8696-ab96ccb4a471"
+        ]
+    },
+    "d92a2266-56ad-40c0-ab4b-823892b5805d": {
+        "id": "d92a2266-56ad-40c0-ab4b-823892b5805d",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "Ill-Make-A-Man-Out-Of-You-Mulan-lyrics.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "daacb9e2-4bf0-4506-964c-d927caf23703"
+    },
+    "dba75822-17d7-4329-8887-3eb569d2173b": {
+        "id": "dba75822-17d7-4329-8887-3eb569d2173b",
+        "class": "ExecuteScript",
+        "name": "",
+        "options": {
+            "exec": [
+                "() => {",
+                "  console.log(\"agdhosghoa\");",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "daacb9e2-4bf0-4506-964c-d927caf23703"
+    },
+    "18e9b274-b42f-4a54-bfb6-0f0bddf630f4": {
+        "id": "18e9b274-b42f-4a54-bfb6-0f0bddf630f4",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "What song? (Karaoke)\nOne. Make A Man Out of You in Mulan\nTwo. Never Gonna Give You Up by Rick Astley",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    },
+    "e7628809-df98-42ae-9413-60066d23927b": {
+        "id": "e7628809-df98-42ae-9413-60066d23927b",
+        "class": "Listen",
+        "name": "",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "music-number.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "        notepad.whatNext = asrResult.NLParse.what;",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    }
+}

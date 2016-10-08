@@ -2,6 +2,6 @@ TopRule = $*
 one {what = 'one'}|
 make a man out of you {what = 'one'}|
 two {what = 'two'}|
-never gonna give you up {what = 'two'}
+never gonna give you up {what = 'two'}|
 $* {what = 'undefined'}
  $*;
