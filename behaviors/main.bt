@@ -1,45 +1,39 @@
 {
     "1": {
         "id": 1,
-        "class": "Sequence",
+        "class": "Parallel",
         "name": "",
-        "options": {},
+        "options": {
+            "succeedOnOne": false
+        },
         "asset-pack": "core",
         "children": [
-            "7f0ebcdc-bce5-4135-9dc4-70e42aeb69ff",
-            "83fa9550-1e69-4e92-ab61-39d67e4c8281"
+            "3a704a90-99c0-41dc-b85d-b69b3d5b0446"
         ],
         "decorators": []
     },
     "meta": {
         "version": 1
     },
-    "7f0ebcdc-bce5-4135-9dc4-70e42aeb69ff": {
-        "id": "7f0ebcdc-bce5-4135-9dc4-70e42aeb69ff",
-        "class": "TextToSpeech",
+    "3a704a90-99c0-41dc-b85d-b69b3d5b0446": {
+        "id": "3a704a90-99c0-41dc-b85d-b69b3d5b0446",
+        "class": "Sequence",
         "name": "",
-        "options": {
-            "words": "Hello World!",
-            "onWord": [
-                "(word) => {",
-                "}"
-            ]
-        },
+        "options": {},
         "asset-pack": "core",
-        "parent": 1
+        "parent": 1,
+        "children": [
+            "d71a99b2-7f2a-45ea-993e-2b6b5398cf75"
+        ]
     },
-    "83fa9550-1e69-4e92-ab61-39d67e4c8281": {
-        "id": "83fa9550-1e69-4e92-ab61-39d67e4c8281",
-        "class": "PlayAnimation",
+    "d71a99b2-7f2a-45ea-993e-2b6b5398cf75": {
+        "id": "d71a99b2-7f2a-45ea-993e-2b6b5398cf75",
+        "class": "PlayAudio",
         "name": "",
         "options": {
-            "animPath": "greeting.keys",
-            "config": [
-                "(animation) => {",
-                "}"
-            ]
+            "audioPath": "MakeAMan.mp3"
         },
         "asset-pack": "core",
-        "parent": 1
+        "parent": "3a704a90-99c0-41dc-b85d-b69b3d5b0446"
     }
 }
