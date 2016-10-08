@@ -1,0 +1,4 @@
+TopRule = jibo $*
+stop {what = 'stop'}|
+$* {what = 'undefined'}
+$*;
