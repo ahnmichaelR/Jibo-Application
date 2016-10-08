@@ -3,6 +3,25 @@
         "id": 1,
         "class": "Sequence",
         "name": "",
-        "args": []
+        "options": {},
+        "children": [
+            "f2acc454-7bf1-4ac2-bb58-69946d20b012"
+        ]
+    },
+    "meta": {
+        "version": 1
+    },
+    "f2acc454-7bf1-4ac2-bb58-69946d20b012": {
+        "id": "f2acc454-7bf1-4ac2-bb58-69946d20b012",
+        "class": "ExecuteScript",
+        "name": "",
+        "options": {
+            "exec": [
+                "() => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
     }
 }
