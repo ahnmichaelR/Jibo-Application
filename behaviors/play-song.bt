@@ -1,0 +1,53 @@
+{
+    "1": {
+        "id": 1,
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "children": [
+            "00da5e6d-2afb-4c77-8eec-28bb2f368080",
+            "e8f86743-05cf-4509-abf1-a946f3617ff7"
+        ]
+    },
+    "meta": {
+        "version": 1
+    },
+    "e8f86743-05cf-4509-abf1-a946f3617ff7": {
+        "id": "e8f86743-05cf-4509-abf1-a946f3617ff7",
+        "class": "ExecuteScript",
+        "name": "",
+        "options": {
+            "exec": [
+                "() => {",
+                "  var number = 1;",
+                "  console.log(\"fsahdgdosd\");",
+                "  switch(number){",
+                "    case 1:",
+                "      var audio = new Audio('audio/MakeAMan.mp3');",
+                "      audio.play();",
+                "      break;",
+                "    case 2:",
+                "    }",
+                "}",
+                "",
+                ""
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    },
+    "00da5e6d-2afb-4c77-8eec-28bb2f368080": {
+        "id": "00da5e6d-2afb-4c77-8eec-28bb2f368080",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "Hellob soelrkgfsldbk",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    }
+}
