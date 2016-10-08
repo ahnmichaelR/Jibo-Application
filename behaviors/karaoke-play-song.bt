@@ -7,7 +7,7 @@
         "children": [
             "00da5e6d-2afb-4c77-8eec-28bb2f368080",
             "0410b399-85d5-49ec-a7a8-f5cc9636d4be",
-            "7771faba-dc7a-4fe8-8015-f9749d906048"
+            "fe58e73f-63be-429b-8a81-68e77eea4b49"
         ]
     },
     "meta": {
@@ -55,80 +55,58 @@
         "asset-pack": "core",
         "parent": 1
     },
-    "7771faba-dc7a-4fe8-8015-f9749d906048": {
-        "id": "7771faba-dc7a-4fe8-8015-f9749d906048",
+    "fe58e73f-63be-429b-8a81-68e77eea4b49": {
+        "id": "fe58e73f-63be-429b-8a81-68e77eea4b49",
         "class": "Switch",
         "name": "",
         "options": {},
         "asset-pack": "core",
         "parent": 1,
         "children": [
-            "13cfafd6-518e-4901-8faa-effe7f2494bb",
-            "83332c6f-6a18-4d83-a942-62196d7c457b"
+            "09f72bb6-d1f6-4d34-afa9-79369b240bc6",
+            "c3004ad4-a205-4b34-b0ab-f853b796eed1"
         ]
     },
-    "83332c6f-6a18-4d83-a942-62196d7c457b": {
-        "id": "83332c6f-6a18-4d83-a942-62196d7c457b",
+    "a2d67d45-645e-444e-bf04-a7b10b3a9df1": {
+        "id": "a2d67d45-645e-444e-bf04-a7b10b3a9df1",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'two'",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "c3004ad4-a205-4b34-b0ab-f853b796eed1": {
+        "id": "c3004ad4-a205-4b34-b0ab-f853b796eed1",
         "class": "Sequence",
         "name": "",
         "options": {},
         "asset-pack": "core",
-        "parent": "7771faba-dc7a-4fe8-8015-f9749d906048",
+        "parent": "fe58e73f-63be-429b-8a81-68e77eea4b49",
         "children": [
-            "ed3d7aee-d35f-4ead-8dc8-f0711473284d"
+            "b9e2c8b6-de6d-4e31-889a-7eeca97f4aad",
+            "f1fdfcbf-1068-4c78-b0fa-a360e18545ad"
         ],
         "decorators": [
-            "45e65658-c823-4007-a278-628792d5b394"
+            "a2d67d45-645e-444e-bf04-a7b10b3a9df1"
         ]
     },
-    "ed3d7aee-d35f-4ead-8dc8-f0711473284d": {
-        "id": "ed3d7aee-d35f-4ead-8dc8-f0711473284d",
-        "class": "ExecuteScript",
+    "f1fdfcbf-1068-4c78-b0fa-a360e18545ad": {
+        "id": "f1fdfcbf-1068-4c78-b0fa-a360e18545ad",
+        "class": "PlayAudio",
         "name": "",
         "options": {
-            "exec": [
-                "() => {",
-                "  console.log(\"ytitoryoy\")",
-                "  new audio = new Audio('audio/NeverGonnaGive.mp3');",
-                "  audio.play();",
-                "}"
-            ]
+            "audioPath": "NeverGonnaGive.mp3"
         },
         "asset-pack": "core",
-        "parent": "83332c6f-6a18-4d83-a942-62196d7c457b"
+        "parent": "c3004ad4-a205-4b34-b0ab-f853b796eed1"
     },
-    "13cfafd6-518e-4901-8faa-effe7f2494bb": {
-        "id": "13cfafd6-518e-4901-8faa-effe7f2494bb",
-        "class": "Sequence",
-        "name": "",
-        "options": {},
-        "asset-pack": "core",
-        "parent": "7771faba-dc7a-4fe8-8015-f9749d906048",
-        "children": [
-            "4105f594-7049-4f54-a638-56826bfc1e4c"
-        ],
-        "decorators": [
-            "abc5d483-a6e9-4562-bbdd-bee25fbab257"
-        ]
-    },
-    "4105f594-7049-4f54-a638-56826bfc1e4c": {
-        "id": "4105f594-7049-4f54-a638-56826bfc1e4c",
-        "class": "ExecuteScript",
-        "name": "",
-        "options": {
-            "exec": [
-                "() => {",
-                "  console.log(\"asdafasdfhoasdfhasodf\")",
-                "  new audio = new Audio('audio/MakeAMan.mp3');",
-                "  audio.play();",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": "13cfafd6-518e-4901-8faa-effe7f2494bb"
-    },
-    "abc5d483-a6e9-4562-bbdd-bee25fbab257": {
-        "id": "abc5d483-a6e9-4562-bbdd-bee25fbab257",
+    "78cec0ee-ea8b-49a4-83cd-e5ae92cbed29": {
+        "id": "78cec0ee-ea8b-49a4-83cd-e5ae92cbed29",
         "class": "Case",
         "name": "",
         "options": {
@@ -140,17 +118,57 @@
         },
         "asset-pack": "core"
     },
-    "45e65658-c823-4007-a278-628792d5b394": {
-        "id": "45e65658-c823-4007-a278-628792d5b394",
-        "class": "Case",
+    "09f72bb6-d1f6-4d34-afa9-79369b240bc6": {
+        "id": "09f72bb6-d1f6-4d34-afa9-79369b240bc6",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "fe58e73f-63be-429b-8a81-68e77eea4b49",
+        "children": [
+            "93e56f19-013a-4dfa-869a-6208ae730d13",
+            "de2c5709-4062-455e-ae19-2f33343b8229"
+        ],
+        "decorators": [
+            "78cec0ee-ea8b-49a4-83cd-e5ae92cbed29"
+        ]
+    },
+    "de2c5709-4062-455e-ae19-2f33343b8229": {
+        "id": "de2c5709-4062-455e-ae19-2f33343b8229",
+        "class": "PlayAudio",
         "name": "",
         "options": {
-            "conditional": [
+            "audioPath": "MakeAMan.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "09f72bb6-d1f6-4d34-afa9-79369b240bc6"
+    },
+    "93e56f19-013a-4dfa-869a-6208ae730d13": {
+        "id": "93e56f19-013a-4dfa-869a-6208ae730d13",
+        "class": "ExecuteScript",
+        "name": "",
+        "options": {
+            "exec": [
                 "() => {",
-                "  return notepad.whatNext == 'two'",
+                "  console.log(\"agdhosghoa\");",
                 "}"
             ]
         },
-        "asset-pack": "core"
+        "asset-pack": "core",
+        "parent": "09f72bb6-d1f6-4d34-afa9-79369b240bc6"
+    },
+    "b9e2c8b6-de6d-4e31-889a-7eeca97f4aad": {
+        "id": "b9e2c8b6-de6d-4e31-889a-7eeca97f4aad",
+        "class": "ExecuteScript",
+        "name": "",
+        "options": {
+            "exec": [
+                "() => {",
+                "  console.log(\"asdgasgasghfsg\")",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "c3004ad4-a205-4b34-b0ab-f853b796eed1"
     }
 }
