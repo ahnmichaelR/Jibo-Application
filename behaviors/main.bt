@@ -1,39 +1,222 @@
 {
     "1": {
         "id": 1,
-        "class": "Parallel",
+        "class": "Sequence",
         "name": "",
-        "options": {
-            "succeedOnOne": false
-        },
+        "options": {},
         "asset-pack": "core",
         "children": [
-            "3a704a90-99c0-41dc-b85d-b69b3d5b0446"
+            "7f0ebcdc-bce5-4135-9dc4-70e42aeb69ff",
+            "83fa9550-1e69-4e92-ab61-39d67e4c8281",
+            "aaae5273-59c1-453b-81d6-8888e288f612"
         ],
         "decorators": []
     },
     "meta": {
         "version": 1
     },
-    "3a704a90-99c0-41dc-b85d-b69b3d5b0446": {
-        "id": "3a704a90-99c0-41dc-b85d-b69b3d5b0446",
-        "class": "Sequence",
+    "7f0ebcdc-bce5-4135-9dc4-70e42aeb69ff": {
+        "id": "7f0ebcdc-bce5-4135-9dc4-70e42aeb69ff",
+        "class": "TextToSpeech",
         "name": "",
+        "options": {
+            "words": "Hello World!",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    },
+    "83fa9550-1e69-4e92-ab61-39d67e4c8281": {
+        "id": "83fa9550-1e69-4e92-ab61-39d67e4c8281",
+        "class": "PlayAnimation",
+        "name": "",
+        "options": {
+            "animPath": "greeting.keys",
+            "config": [
+                "(animation) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    },
+    "aaae5273-59c1-453b-81d6-8888e288f612": {
+        "id": "aaae5273-59c1-453b-81d6-8888e288f612",
+        "class": "Sequence",
+        "name": "listen for actions",
         "options": {},
         "asset-pack": "core",
         "parent": 1,
         "children": [
-            "d71a99b2-7f2a-45ea-993e-2b6b5398cf75"
+            "b658a98c-b7ed-42f0-a31d-8d0887aa43e1",
+            "96b3ecfb-2247-45a0-9028-f553d58bb38c"
         ]
     },
-    "d71a99b2-7f2a-45ea-993e-2b6b5398cf75": {
-        "id": "d71a99b2-7f2a-45ea-993e-2b6b5398cf75",
-        "class": "PlayAudio",
+    "b658a98c-b7ed-42f0-a31d-8d0887aa43e1": {
+        "id": "b658a98c-b7ed-42f0-a31d-8d0887aa43e1",
+        "class": "Listen",
         "name": "",
         "options": {
-            "audioPath": "MakeAMan.mp3"
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "action.rule",
+            "onResult": [
+                "(listener) => {",
+                "  listener.on('cloud', function(asrResult, speakerIds) {",
+                "      notepad.whatNext = asrResult.NLParse.what;",
+                "  });",
+                "}"
+            ]
         },
         "asset-pack": "core",
-        "parent": "3a704a90-99c0-41dc-b85d-b69b3d5b0446"
+        "parent": "aaae5273-59c1-453b-81d6-8888e288f612"
+    },
+    "96b3ecfb-2247-45a0-9028-f553d58bb38c": {
+        "id": "96b3ecfb-2247-45a0-9028-f553d58bb38c",
+        "class": "Switch",
+        "name": "select action",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "aaae5273-59c1-453b-81d6-8888e288f612",
+        "children": [
+            "817e734d-8621-42d4-92ac-7b2dc6099f08",
+            "de167316-9f1b-43ea-8f9f-38da5829ead7"
+        ]
+    },
+    "cd0ad576-41ef-4f89-b30b-eacf00a00afd": {
+        "id": "cd0ad576-41ef-4f89-b30b-eacf00a00afd",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "What song? (Music)",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "de167316-9f1b-43ea-8f9f-38da5829ead7",
+        "decorators": []
+    },
+    "cf713036-1088-421c-8cbd-172e526ca9ec": {
+        "id": "cf713036-1088-421c-8cbd-172e526ca9ec",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "What song? (Karaoke)",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "817e734d-8621-42d4-92ac-7b2dc6099f08",
+        "decorators": []
+    },
+    "817e734d-8621-42d4-92ac-7b2dc6099f08": {
+        "id": "817e734d-8621-42d4-92ac-7b2dc6099f08",
+        "class": "Sequence",
+        "name": "choose song (karaoke)",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "96b3ecfb-2247-45a0-9028-f553d58bb38c",
+        "children": [
+            "cf713036-1088-421c-8cbd-172e526ca9ec",
+            "7bea6ab5-88bc-4a90-8ad1-6511e0773a60"
+        ],
+        "decorators": [
+            "d759459f-97ac-4638-a644-d4d9a4ac5ccf"
+        ]
+    },
+    "de167316-9f1b-43ea-8f9f-38da5829ead7": {
+        "id": "de167316-9f1b-43ea-8f9f-38da5829ead7",
+        "class": "Sequence",
+        "name": "choose song (music)",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "96b3ecfb-2247-45a0-9028-f553d58bb38c",
+        "children": [
+            "cd0ad576-41ef-4f89-b30b-eacf00a00afd",
+            "b320a578-456f-4d38-89c1-527b870ae6a7"
+        ],
+        "decorators": [
+            "2e4306de-bf5f-4167-b52d-d2ceeb9fe63f"
+        ]
+    },
+    "d759459f-97ac-4638-a644-d4d9a4ac5ccf": {
+        "id": "d759459f-97ac-4638-a644-d4d9a4ac5ccf",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'karaoke';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "2e4306de-bf5f-4167-b52d-d2ceeb9fe63f": {
+        "id": "2e4306de-bf5f-4167-b52d-d2ceeb9fe63f",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'music';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "7bea6ab5-88bc-4a90-8ad1-6511e0773a60": {
+        "id": "7bea6ab5-88bc-4a90-8ad1-6511e0773a60",
+        "class": "Subtree",
+        "name": "karaoke tree",
+        "options": {
+            "behaviorPath": "null",
+            "getNotepad": [
+                "() => {",
+                "    return {};",
+                "}"
+            ],
+            "onResult": [
+                "(treeResult) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "817e734d-8621-42d4-92ac-7b2dc6099f08"
+    },
+    "b320a578-456f-4d38-89c1-527b870ae6a7": {
+        "id": "b320a578-456f-4d38-89c1-527b870ae6a7",
+        "class": "Subtree",
+        "name": "music tree",
+        "options": {
+            "behaviorPath": "null",
+            "getNotepad": [
+                "() => {",
+                "    return {};",
+                "}"
+            ],
+            "onResult": [
+                "(treeResult) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "de167316-9f1b-43ea-8f9f-38da5829ead7"
     }
 }
