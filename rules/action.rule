@@ -1,5 +1,5 @@
 TopRule = i want to $*
 karaoke {what = 'karaoke'}|
-song {what = 'music'}|
+music {what = 'music'}|
 $* {what = 'undefined'}
 $*;
