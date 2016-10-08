@@ -6,8 +6,9 @@
         "options": {},
         "asset-pack": "core",
         "children": [
-            "7f0ebcdc-bce5-4135-9dc4-70e42aeb69ff",
             "83fa9550-1e69-4e92-ab61-39d67e4c8281",
+            "656a3ac0-d77e-4c0c-8e01-8a00ce9f3d11",
+            "7f0ebcdc-bce5-4135-9dc4-70e42aeb69ff",
             "71b8e185-2297-4aab-b8e9-0e16f7d09f18"
         ],
         "decorators": []
@@ -20,7 +21,7 @@
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "Hello World!",
+            "words": "Hello! If you would like to sing, say Karaoke! If you would like to listen to music, say music!",
             "onWord": [
                 "(word) => {",
                 "}"
@@ -58,6 +59,16 @@
                 "(treeResult) => {",
                 "}"
             ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    },
+    "656a3ac0-d77e-4c0c-8e01-8a00ce9f3d11": {
+        "id": "656a3ac0-d77e-4c0c-8e01-8a00ce9f3d11",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "FX_DoYouWantToPlay_01.mp3"
         },
         "asset-pack": "core",
         "parent": 1
