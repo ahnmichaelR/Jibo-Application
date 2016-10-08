@@ -6,8 +6,9 @@
         "options": {},
         "children": [
             "00da5e6d-2afb-4c77-8eec-28bb2f368080",
-            "0410b399-85d5-49ec-a7a8-f5cc9636d4be",
-            "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0"
+            "fcbbeffa-d26e-41b2-96c2-f2511fdf8a75",
+            "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0",
+            "fadcd6f2-bde6-498c-a5e8-700accaa1c1a"
         ]
     },
     "meta": {
@@ -21,34 +22,6 @@
             "words": "What song? (Karaoke) \nOne. Make A Man Out of You in Mulan \nTwo. Never Gonna Give You Up by Rick Astley",
             "onWord": [
                 "(word) => {",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": 1
-    },
-    "0410b399-85d5-49ec-a7a8-f5cc9636d4be": {
-        "id": "0410b399-85d5-49ec-a7a8-f5cc9636d4be",
-        "class": "Listen",
-        "name": "",
-        "options": {
-            "getOptions": [
-                "() => {",
-                "    let options = {",
-                "        heyJibo: false,",
-                "        detectEnd: false,",
-                "        incremental: false,",
-                "        authenticateSpeaker: ''",
-                "    }",
-                "    return options;",
-                "}"
-            ],
-            "rule": "karaoke-number.rule",
-            "onResult": [
-                "(listener) => {",
-                "    listener.on('cloud', function(asrResult, speakerIds) {",
-                "        notepad.whatNext = asrResult.NLParse.what;",
-                "    });",
                 "}"
             ]
         },
@@ -227,7 +200,7 @@
             ],
             "conditional": [
                 "() => {",
-                "    return notepad.whatNext == 'stop' | notepad.whatNext == 'pause';",
+                "    return notepad.whatNext == 'stop';",
                 "}"
             ]
         },
@@ -244,7 +217,7 @@
             ],
             "conditional": [
                 "() => {",
-                "  return notepad.whatNext == 'stop' | notepad.whatNext == 'pause';",
+                "  return notepad.whatNext == 'stop';",
                 "}"
             ]
         },
@@ -261,7 +234,74 @@
             ],
             "conditional": [
                 "() => {",
-                "    return notepad.whatNext != 'stop' | notepad.whatNext != 'pause';",
+                "    return notepad.whatNext != 'stop';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "fadcd6f2-bde6-498c-a5e8-700accaa1c1a": {
+        "id": "fadcd6f2-bde6-498c-a5e8-700accaa1c1a",
+        "class": "Subtree",
+        "name": "",
+        "options": {
+            "behaviorPath": "actions.bt",
+            "getNotepad": [
+                "() => {",
+                "    return {};",
+                "}"
+            ],
+            "onResult": [
+                "(treeResult) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    },
+    "fcbbeffa-d26e-41b2-96c2-f2511fdf8a75": {
+        "id": "fcbbeffa-d26e-41b2-96c2-f2511fdf8a75",
+        "class": "Listen",
+        "name": "",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "karaoke-number.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "        notepad.whatNext = asrResult.NLParse.what;",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1,
+        "decorators": [
+            "dcdb15a9-376f-4bad-b973-1ca7d89c23fe"
+        ]
+    },
+    "dcdb15a9-376f-4bad-b973-1ca7d89c23fe": {
+        "id": "dcdb15a9-376f-4bad-b973-1ca7d89c23fe",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "    return !(notepad.whatNext == 'one'|notepad.whatNext == 'two');",
                 "}"
             ]
         },

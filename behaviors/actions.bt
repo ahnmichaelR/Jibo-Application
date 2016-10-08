@@ -138,7 +138,7 @@
         "asset-pack": "core",
         "parent": "a543b70b-e056-4332-a6f4-de36a2d0c49e",
         "decorators": [
-            "aa1c0ecc-7904-468c-8bfb-9f7ffcd4503b"
+            "0d7fd675-eb50-4b8c-9a69-2a0638703298"
         ]
     },
     "abec1885-2636-4184-94f9-0081eb6bc204": {
@@ -160,9 +160,9 @@
         "asset-pack": "core",
         "parent": "c8c27e38-d262-4f5c-a5d2-841b058d4b86"
     },
-    "aa1c0ecc-7904-468c-8bfb-9f7ffcd4503b": {
-        "id": "aa1c0ecc-7904-468c-8bfb-9f7ffcd4503b",
-        "class": "SucceedOnCondition",
+    "0d7fd675-eb50-4b8c-9a69-2a0638703298": {
+        "id": "0d7fd675-eb50-4b8c-9a69-2a0638703298",
+        "class": "WhileCondition",
         "name": "",
         "options": {
             "init": [
@@ -171,7 +171,7 @@
             ],
             "conditional": [
                 "() => {",
-                "    return notepad.whatNext == 'karaoke'| notepad.whatNext == 'music';",
+                "    return !(notepad.whatNext == 'karaoke'|notepad.whatNext == 'music');",
                 "}"
             ]
         },

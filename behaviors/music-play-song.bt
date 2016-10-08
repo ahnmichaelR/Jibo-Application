@@ -6,7 +6,7 @@
         "options": {},
         "children": [
             "00da5e6d-2afb-4c77-8eec-28bb2f368080",
-            "0410b399-85d5-49ec-a7a8-f5cc9636d4be",
+            "9c2fffe9-8646-497e-98bc-e2b2719c8df3",
             "f0b44e2d-3cbb-4b80-a837-b06bcab1eb83"
         ]
     },
@@ -21,34 +21,6 @@
             "words": "What song? (Music)\nOne. Make A Man Out of You in Mulan\nTwo. Never Gonna Give You Up by Rick Astley",
             "onWord": [
                 "(word) => {",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": 1
-    },
-    "0410b399-85d5-49ec-a7a8-f5cc9636d4be": {
-        "id": "0410b399-85d5-49ec-a7a8-f5cc9636d4be",
-        "class": "Listen",
-        "name": "",
-        "options": {
-            "getOptions": [
-                "() => {",
-                "    let options = {",
-                "        heyJibo: false,",
-                "        detectEnd: false,",
-                "        incremental: false,",
-                "        authenticateSpeaker: ''",
-                "    }",
-                "    return options;",
-                "}"
-            ],
-            "rule": "music-number.rule",
-            "onResult": [
-                "(listener) => {",
-                "    listener.on('cloud', function(asrResult, speakerIds) {",
-                "        notepad.whatNext = asrResult.NLParse.what;",
-                "    });",
                 "}"
             ]
         },
@@ -246,5 +218,53 @@
         },
         "asset-pack": "core",
         "parent": "d562a29c-8678-4563-b179-dcabded01177"
+    },
+    "b2079f4c-1e87-415a-9cf9-be9455000d34": {
+        "id": "b2079f4c-1e87-415a-9cf9-be9455000d34",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "    return !(notepad.whatNext == 'one'|notepad.whatNext == 'two');",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "9c2fffe9-8646-497e-98bc-e2b2719c8df3": {
+        "id": "9c2fffe9-8646-497e-98bc-e2b2719c8df3",
+        "class": "Listen",
+        "name": "",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "karaoke-number.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "        notepad.whatNext = asrResult.NLParse.what;",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1,
+        "decorators": [
+            "b2079f4c-1e87-415a-9cf9-be9455000d34"
+        ]
     }
 }
