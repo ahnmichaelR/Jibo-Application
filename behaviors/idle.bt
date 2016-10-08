@@ -1,135 +1,227 @@
 {
-  "3": {
-    "id": 3,
-    "class": "Parallel",
-    "name": "",
-    "asset-pack": "core",
-    "children": [
-      19,
-      16
-    ],
-    "decorators": [],
-    "options": {
-      "succeedOnOne": false
+    "3": {
+        "id": 3,
+        "class": "Parallel",
+        "name": "",
+        "asset-pack": "core",
+        "children": [
+            19,
+            16
+        ],
+        "decorators": [],
+        "options": {
+            "succeedOnOne": false
+        }
+    },
+    "16": {
+        "id": 16,
+        "class": "Sequence",
+        "name": "",
+        "asset-pack": "core",
+        "parent": 3,
+        "children": [
+            18,
+            "e977aaeb-7383-494b-b4f7-fdf221014e32"
+        ],
+        "decorators": [
+            23
+        ],
+        "options": {}
+    },
+    "17": {
+        "id": 17,
+        "class": "LookAt",
+        "name": "Choose place to look",
+        "asset-pack": "core",
+        "parent": "ed9ad3f4-948e-4283-9814-0855ec0c7b6a",
+        "options": {
+            "getTarget": [
+                "() => {",
+                "\tlet x = 1;",
+                "\tlet y = (1 - 2 * Math.random());",
+                "\tlet z = 0.7 + 0.5 * (1 - 2 * Math.random());",
+                "\treturn {x: x, y: y, z: z};",
+                "}"
+            ]
+        }
+    },
+    "18": {
+        "id": 18,
+        "class": "TimeoutJs",
+        "asset-pack": "core",
+        "parent": 16,
+        "name": "Pause for a bit",
+        "options": {
+            "getTime": [
+                "() => {",
+                "   return 1000 + 2000 * Math.random();",
+                "}"
+            ]
+        }
+    },
+    "19": {
+        "id": 19,
+        "class": "Sequence",
+        "name": "",
+        "asset-pack": "core",
+        "parent": 3,
+        "children": [
+            21,
+            "2edd998a-f02f-4ec0-bacf-4357e9719f1d"
+        ],
+        "decorators": [
+            22
+        ],
+        "options": {}
+    },
+    "20": {
+        "id": 20,
+        "class": "Blink",
+        "asset-pack": "core",
+        "parent": "64995a5c-e64f-4ca6-9cac-9f46007e1ba2",
+        "options": {}
+    },
+    "21": {
+        "id": 21,
+        "class": "TimeoutJs",
+        "name": "Pause for a bit",
+        "asset-pack": "core",
+        "parent": 19,
+        "options": {
+            "getTime": [
+                "() => {",
+                "   return 2000 + 2500 * Math.random();",
+                "}"
+            ]
+        }
+    },
+    "22": {
+        "id": 22,
+        "class": "WhileCondition",
+        "name": "",
+        "asset-pack": "core",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "  return true;",
+                "}"
+            ]
+        }
+    },
+    "23": {
+        "id": 23,
+        "class": "WhileCondition",
+        "name": "",
+        "asset-pack": "core",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "  return true;",
+                "}"
+            ]
+        }
+    },
+    "meta": {
+        "version": 1
+    },
+    "2081d23f-a17d-440d-bc67-51096a1cba59": {
+        "id": "2081d23f-a17d-440d-bc67-51096a1cba59",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "FX_Bloop.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "80d6ec96-62e3-4146-a342-f5c1b61a7f73"
+    },
+    "2edd998a-f02f-4ec0-bacf-4357e9719f1d": {
+        "id": "2edd998a-f02f-4ec0-bacf-4357e9719f1d",
+        "class": "Parallel",
+        "name": "",
+        "options": {
+            "succeedOnOne": false
+        },
+        "asset-pack": "core",
+        "parent": 19,
+        "children": [
+            "64995a5c-e64f-4ca6-9cac-9f46007e1ba2",
+            "80d6ec96-62e3-4146-a342-f5c1b61a7f73"
+        ]
+    },
+    "80d6ec96-62e3-4146-a342-f5c1b61a7f73": {
+        "id": "80d6ec96-62e3-4146-a342-f5c1b61a7f73",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "2edd998a-f02f-4ec0-bacf-4357e9719f1d",
+        "children": [
+            "2081d23f-a17d-440d-bc67-51096a1cba59"
+        ]
+    },
+    "64995a5c-e64f-4ca6-9cac-9f46007e1ba2": {
+        "id": "64995a5c-e64f-4ca6-9cac-9f46007e1ba2",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "2edd998a-f02f-4ec0-bacf-4357e9719f1d",
+        "children": [
+            20
+        ]
+    },
+    "e977aaeb-7383-494b-b4f7-fdf221014e32": {
+        "id": "e977aaeb-7383-494b-b4f7-fdf221014e32",
+        "class": "Parallel",
+        "name": "",
+        "options": {
+            "succeedOnOne": false
+        },
+        "asset-pack": "core",
+        "parent": 16,
+        "children": [
+            "7120f56f-a5aa-409d-bf4c-caa2f353bb60",
+            "ed9ad3f4-948e-4283-9814-0855ec0c7b6a"
+        ]
+    },
+    "ed9ad3f4-948e-4283-9814-0855ec0c7b6a": {
+        "id": "ed9ad3f4-948e-4283-9814-0855ec0c7b6a",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "e977aaeb-7383-494b-b4f7-fdf221014e32",
+        "children": [
+            17
+        ]
+    },
+    "7120f56f-a5aa-409d-bf4c-caa2f353bb60": {
+        "id": "7120f56f-a5aa-409d-bf4c-caa2f353bb60",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "e977aaeb-7383-494b-b4f7-fdf221014e32",
+        "children": [
+            "c294aef6-ae93-4ea8-a2dd-f83bb7198fa0"
+        ]
+    },
+    "c294aef6-ae93-4ea8-a2dd-f83bb7198fa0": {
+        "id": "c294aef6-ae93-4ea8-a2dd-f83bb7198fa0",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "FX_Bleep.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "7120f56f-a5aa-409d-bf4c-caa2f353bb60"
     }
-  },
-  "16": {
-    "id": 16,
-    "class": "Sequence",
-    "name": "",
-    "asset-pack": "core",
-    "parent": 3,
-    "children": [
-      18,
-      17
-    ],
-    "decorators": [
-      23
-    ],
-    "options": {}
-  },
-  "17": {
-    "id": 17,
-    "class": "LookAt",
-    "name": "Choose place to look",
-    "asset-pack": "core",
-    "parent": 16,
-    "options": {
-      "getTarget": [
-        "() => {",
-        "\tlet x = 1;",
-        "\tlet y = (1 - 2 * Math.random());",
-        "\tlet z = 0.7 + 0.5 * (1 - 2 * Math.random());",
-        "\treturn {x: x, y: y, z: z};",
-        "}"
-      ]
-    }
-  },
-  "18": {
-    "id": 18,
-    "class": "TimeoutJs",
-    "asset-pack": "core",
-    "parent": 16,
-    "name": "Pause for a bit",
-    "options": {
-      "getTime": [
-        "() => {",
-        "   return 1000 + 2000 * Math.random();",
-        "}"
-      ]
-    }
-  },
-  "19": {
-    "id": 19,
-    "class": "Sequence",
-    "name": "",
-    "asset-pack": "core",
-    "parent": 3,
-    "children": [
-      21,
-      20
-    ],
-    "decorators": [
-      22
-    ],
-    "options": {}
-  },
-  "20": {
-    "id": 20,
-    "class": "Blink",
-    "asset-pack": "core",
-    "parent": 19,
-    "options": {}
-  },
-  "21": {
-    "id": 21,
-    "class": "TimeoutJs",
-    "name": "Pause for a bit",
-    "asset-pack": "core",
-    "parent": 19,
-    "options": {
-      "getTime": [
-        "() => {",
-        "   return 2000 + 2500 * Math.random();",
-        "}"
-      ]
-    }
-  },
-  "22": {
-    "id": 22,
-    "class": "WhileCondition",
-    "name": "",
-    "asset-pack": "core",
-    "options": {
-      "init": [
-        "() => {",
-        "}"
-      ],
-      "conditional": [
-        "() => {",
-        "  return true;",
-        "}"
-      ]
-    }
-  },
-  "23": {
-    "id": 23,
-    "class": "WhileCondition",
-    "name": "",
-    "asset-pack": "core",
-    "options": {
-      "init": [
-        "() => {",
-        "}"
-      ],
-      "conditional": [
-        "() => {",
-        "  return true;",
-        "}"
-      ]
-    }
-  },
-  "meta": {
-    "version": 1
-  }
 }
