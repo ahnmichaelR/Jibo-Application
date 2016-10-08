@@ -1,0 +1,5 @@
+TopRule = number$*
+one {what = 'one'}|
+two {what = 'two'}|
+$* {what = 'undefined'}
+ $*;

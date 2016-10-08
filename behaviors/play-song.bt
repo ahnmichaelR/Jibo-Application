@@ -6,42 +6,19 @@
         "options": {},
         "children": [
             "00da5e6d-2afb-4c77-8eec-28bb2f368080",
-            "e8f86743-05cf-4509-abf1-a946f3617ff7"
+            "0410b399-85d5-49ec-a7a8-f5cc9636d4be",
+            "7771faba-dc7a-4fe8-8015-f9749d906048"
         ]
     },
     "meta": {
         "version": 1
-    },
-    "e8f86743-05cf-4509-abf1-a946f3617ff7": {
-        "id": "e8f86743-05cf-4509-abf1-a946f3617ff7",
-        "class": "ExecuteScript",
-        "name": "",
-        "options": {
-            "exec": [
-                "() => {",
-                "  var number = 1;",
-                "  console.log(\"fsahdgdosd\");",
-                "  switch(number){",
-                "    case 1:",
-                "      var audio = new Audio('audio/MakeAMan.mp3');",
-                "      audio.play();",
-                "      break;",
-                "    case 2:",
-                "    }",
-                "}",
-                "",
-                ""
-            ]
-        },
-        "asset-pack": "core",
-        "parent": 1
     },
     "00da5e6d-2afb-4c77-8eec-28bb2f368080": {
         "id": "00da5e6d-2afb-4c77-8eec-28bb2f368080",
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "Hellob soelrkgfsldbk",
+            "words": "What song? (Karaoke)\nOne. Make A Man Out of You in Mulan\nTwo. Never Gonna Give You Up by Rick Astley",
             "onWord": [
                 "(word) => {",
                 "}"
@@ -49,5 +26,131 @@
         },
         "asset-pack": "core",
         "parent": 1
+    },
+    "0410b399-85d5-49ec-a7a8-f5cc9636d4be": {
+        "id": "0410b399-85d5-49ec-a7a8-f5cc9636d4be",
+        "class": "Listen",
+        "name": "",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "karaoke-number.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "        notepad.whatNext = asrResult.NLParse.what;",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1
+    },
+    "7771faba-dc7a-4fe8-8015-f9749d906048": {
+        "id": "7771faba-dc7a-4fe8-8015-f9749d906048",
+        "class": "Switch",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": 1,
+        "children": [
+            "13cfafd6-518e-4901-8faa-effe7f2494bb",
+            "83332c6f-6a18-4d83-a942-62196d7c457b"
+        ]
+    },
+    "83332c6f-6a18-4d83-a942-62196d7c457b": {
+        "id": "83332c6f-6a18-4d83-a942-62196d7c457b",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "7771faba-dc7a-4fe8-8015-f9749d906048",
+        "children": [
+            "ed3d7aee-d35f-4ead-8dc8-f0711473284d"
+        ],
+        "decorators": [
+            "45e65658-c823-4007-a278-628792d5b394"
+        ]
+    },
+    "ed3d7aee-d35f-4ead-8dc8-f0711473284d": {
+        "id": "ed3d7aee-d35f-4ead-8dc8-f0711473284d",
+        "class": "ExecuteScript",
+        "name": "",
+        "options": {
+            "exec": [
+                "() => {",
+                "  console.log(\"ytitoryoy\")",
+                "  new audio = new Audio('audio/NeverGonnaGive.mp3');",
+                "  audio.play();",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "83332c6f-6a18-4d83-a942-62196d7c457b"
+    },
+    "13cfafd6-518e-4901-8faa-effe7f2494bb": {
+        "id": "13cfafd6-518e-4901-8faa-effe7f2494bb",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "7771faba-dc7a-4fe8-8015-f9749d906048",
+        "children": [
+            "4105f594-7049-4f54-a638-56826bfc1e4c"
+        ],
+        "decorators": [
+            "abc5d483-a6e9-4562-bbdd-bee25fbab257"
+        ]
+    },
+    "4105f594-7049-4f54-a638-56826bfc1e4c": {
+        "id": "4105f594-7049-4f54-a638-56826bfc1e4c",
+        "class": "ExecuteScript",
+        "name": "",
+        "options": {
+            "exec": [
+                "() => {",
+                "  console.log(\"asdafasdfhoasdfhasodf\")",
+                "  new audio = new Audio('audio/MakeAMan.mp3');",
+                "  audio.play();",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "13cfafd6-518e-4901-8faa-effe7f2494bb"
+    },
+    "abc5d483-a6e9-4562-bbdd-bee25fbab257": {
+        "id": "abc5d483-a6e9-4562-bbdd-bee25fbab257",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'one'",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "45e65658-c823-4007-a278-628792d5b394": {
+        "id": "45e65658-c823-4007-a278-628792d5b394",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'two'",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
     }
 }

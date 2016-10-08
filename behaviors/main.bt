@@ -115,7 +115,7 @@
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "What song? (Karaoke)",
+            "words": "What song? (Karaoke)\nOne. Make A Man Out of You in Mulan\nTwo. Never Gonna Give You Up by Rick Astley",
             "onWord": [
                 "(word) => {",
                 "}"
@@ -134,7 +134,7 @@
         "parent": "96b3ecfb-2247-45a0-9028-f553d58bb38c",
         "children": [
             "cf713036-1088-421c-8cbd-172e526ca9ec",
-            "7bea6ab5-88bc-4a90-8ad1-6511e0773a60"
+            "55a0c111-d309-4491-b848-bc68dff50c59"
         ],
         "decorators": [
             "d759459f-97ac-4638-a644-d4d9a4ac5ccf"
@@ -181,25 +181,6 @@
         },
         "asset-pack": "core"
     },
-    "7bea6ab5-88bc-4a90-8ad1-6511e0773a60": {
-        "id": "7bea6ab5-88bc-4a90-8ad1-6511e0773a60",
-        "class": "Subtree",
-        "name": "karaoke tree",
-        "options": {
-            "behaviorPath": "null",
-            "getNotepad": [
-                "() => {",
-                "    return {};",
-                "}"
-            ],
-            "onResult": [
-                "(treeResult) => {",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": "817e734d-8621-42d4-92ac-7b2dc6099f08"
-    },
     "b320a578-456f-4d38-89c1-527b870ae6a7": {
         "id": "b320a578-456f-4d38-89c1-527b870ae6a7",
         "class": "Subtree",
@@ -218,5 +199,33 @@
         },
         "asset-pack": "core",
         "parent": "de167316-9f1b-43ea-8f9f-38da5829ead7"
+    },
+    "55a0c111-d309-4491-b848-bc68dff50c59": {
+        "id": "55a0c111-d309-4491-b848-bc68dff50c59",
+        "class": "Listen",
+        "name": "",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "null",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "817e734d-8621-42d4-92ac-7b2dc6099f08"
     }
 }
