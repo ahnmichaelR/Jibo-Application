@@ -46,23 +46,11 @@
         "asset-pack": "core",
         "parent": "f27fb4c5-6cca-4004-b163-6c6cea303ca7",
         "children": [
-            "0674d582-7d30-4118-987e-122c3f23236c",
-            "3259fc26-03ac-4bef-b8a9-746a96339299",
-            "30b9a22d-7c43-4fa0-866b-73b1967a2501"
+            "0674d582-7d30-4118-987e-122c3f23236c"
         ],
         "decorators": [
             "c0202fc0-baaa-4b8e-9442-fa243860d93a"
         ]
-    },
-    "3259fc26-03ac-4bef-b8a9-746a96339299": {
-        "id": "3259fc26-03ac-4bef-b8a9-746a96339299",
-        "class": "PlayAudio",
-        "name": "",
-        "options": {
-            "audioPath": "NeverGonnaGive.mp3"
-        },
-        "asset-pack": "core",
-        "parent": "68a47d95-f0ce-402d-b9c5-5251854195af"
     },
     "0674d582-7d30-4118-987e-122c3f23236c": {
         "id": "0674d582-7d30-4118-987e-122c3f23236c",
@@ -72,6 +60,15 @@
             "exec": [
                 "() => {",
                 "  console.log(\"asdgasgasghfsg\")",
+                "  jibo.sound.add()",
+                "  notepad.sound = jibo.sound.add('never',{",
+                "    src: 'audio/NeverGonnaGive.mp3',  // location in file system",
+                "    preload: true,              // start loading the sound right away?",
+                "    autoPlay: true,             // start playing the sound immediately after loading?",
+                "    loop: false,                // loop my sound? (false by default)",
+                "    block: false,                // allow other sounds to play over this sound? (false by default)",
+                "    // useXHR: true,  //commented out, neccesary to use if your src is set to an external URL",
+                "  });",
                 "}"
             ]
         },
@@ -98,8 +95,12 @@
         "asset-pack": "core",
         "parent": "f27fb4c5-6cca-4004-b163-6c6cea303ca7",
         "children": [
+<<<<<<< HEAD
             "3e85d9b0-d746-408c-aa11-3579e2a80591",
             "e206e935-f8a4-4028-94d5-6b92f31c88b5"
+=======
+            "dba75822-17d7-4329-8887-3eb569d2173b"
+>>>>>>> f8b00e0cb9e5034b8e3d9e7c90f840c8f90fbc89
         ],
         "decorators": [
             "3dc1bef6-7abf-49d0-8696-ab96ccb4a471"
@@ -165,6 +166,7 @@
         },
         "asset-pack": "core",
         "parent": 1
+<<<<<<< HEAD
     },
     "e206e935-f8a4-4028-94d5-6b92f31c88b5": {
         "id": "e206e935-f8a4-4028-94d5-6b92f31c88b5",
@@ -208,5 +210,7 @@
         },
         "asset-pack": "core",
         "parent": "daacb9e2-4bf0-4506-964c-d927caf23703"
+=======
+>>>>>>> f8b00e0cb9e5034b8e3d9e7c90f840c8f90fbc89
     }
 }
