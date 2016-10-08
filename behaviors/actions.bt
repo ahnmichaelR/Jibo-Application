@@ -19,6 +19,7 @@
         "asset-pack": "core",
         "parent": 1,
         "children": [
+            "5a912c49-ffbf-4caf-9fa7-05a6868583a1",
             "45b97d42-60a7-4c5f-a76e-8a3e2b9c1bc3",
             "92906990-6c4a-4a11-aa84-cfa4cf2b2377"
         ],
@@ -183,8 +184,22 @@
         "class": "TimeoutSucceed",
         "name": "",
         "options": {
-            "timeout": 5000
+            "timeout": 5000000
         },
         "asset-pack": "core"
+    },
+    "5a912c49-ffbf-4caf-9fa7-05a6868583a1": {
+        "id": "5a912c49-ffbf-4caf-9fa7-05a6868583a1",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "Welcome",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "a543b70b-e056-4332-a6f4-de36a2d0c49e"
     }
 }

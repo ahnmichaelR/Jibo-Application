@@ -47,7 +47,8 @@
         "parent": "f27fb4c5-6cca-4004-b163-6c6cea303ca7",
         "children": [
             "0674d582-7d30-4118-987e-122c3f23236c",
-            "3259fc26-03ac-4bef-b8a9-746a96339299"
+            "3259fc26-03ac-4bef-b8a9-746a96339299",
+            "30b9a22d-7c43-4fa0-866b-73b1967a2501"
         ],
         "decorators": [
             "c0202fc0-baaa-4b8e-9442-fa243860d93a"
@@ -99,21 +100,11 @@
         "parent": "f27fb4c5-6cca-4004-b163-6c6cea303ca7",
         "children": [
             "dba75822-17d7-4329-8887-3eb569d2173b",
-            "d92a2266-56ad-40c0-ab4b-823892b5805d"
+            "24cdb0b7-0a51-4480-b6e1-93db02df71a1"
         ],
         "decorators": [
             "3dc1bef6-7abf-49d0-8696-ab96ccb4a471"
         ]
-    },
-    "d92a2266-56ad-40c0-ab4b-823892b5805d": {
-        "id": "d92a2266-56ad-40c0-ab4b-823892b5805d",
-        "class": "PlayAudio",
-        "name": "",
-        "options": {
-            "audioPath": "Ill-Make-A-Man-Out-Of-You-Mulan-lyrics.mp3"
-        },
-        "asset-pack": "core",
-        "parent": "daacb9e2-4bf0-4506-964c-d927caf23703"
     },
     "dba75822-17d7-4329-8887-3eb569d2173b": {
         "id": "dba75822-17d7-4329-8887-3eb569d2173b",
@@ -123,6 +114,15 @@
             "exec": [
                 "() => {",
                 "  console.log(\"agdhosghoa\");",
+                "  jibo.sound.add()",
+                "  notepad.sound = jibo.sound.add('man',{",
+                "    src: 'audio/Ill-Make-A-Man-Out-Of-You-Mulan-lyrics.mp3',  // location in file system",
+                "    preload: true,              // start loading the sound right away?",
+                "    autoPlay: true,             // start playing the sound immediately after loading?",
+                "    loop: false,                // loop my sound? (false by default)",
+                "    block: false,                // allow other sounds to play over this sound? (false by default)",
+                "    // useXHR: true,  //commented out, neccesary to use if your src is set to an external URL",
+                "  });",
                 "}"
             ]
         },
@@ -170,5 +170,43 @@
         },
         "asset-pack": "core",
         "parent": 1
+    },
+    "24cdb0b7-0a51-4480-b6e1-93db02df71a1": {
+        "id": "24cdb0b7-0a51-4480-b6e1-93db02df71a1",
+        "class": "Subtree",
+        "name": "",
+        "options": {
+            "behaviorPath": "actions.bt",
+            "getNotepad": [
+                "() => {",
+                "    return {};",
+                "}"
+            ],
+            "onResult": [
+                "(treeResult) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "daacb9e2-4bf0-4506-964c-d927caf23703"
+    },
+    "30b9a22d-7c43-4fa0-866b-73b1967a2501": {
+        "id": "30b9a22d-7c43-4fa0-866b-73b1967a2501",
+        "class": "Subtree",
+        "name": "",
+        "options": {
+            "behaviorPath": "actions.bt",
+            "getNotepad": [
+                "() => {",
+                "    return {};",
+                "}"
+            ],
+            "onResult": [
+                "(treeResult) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "68a47d95-f0ce-402d-b9c5-5251854195af"
     }
 }
