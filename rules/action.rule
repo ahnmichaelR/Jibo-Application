@@ -1,5 +1,6 @@
 TopRule = $*
 karaoke {what = 'karaoke'}|
 music {what = 'music'}|
+random {what = 'random'}|
 $* {what = 'undefined'}
 $*;

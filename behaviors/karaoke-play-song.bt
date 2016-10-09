@@ -19,7 +19,7 @@
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "You chose karaoke...which song?... \nOne. Make A Man Out of You in Mulan...\nTwo. Never Gonna Give You Up by Rick Astley...",
+            "words": "You chose karaoke...which song?... \nSay One for...Make A Man Out of You in Mulan...\nSay Two for...Never Gonna Give You Up by Rick Astley...",
             "onWord": [
                 "(word) => {",
                 "}"

@@ -5,9 +5,7 @@
         "name": "",
         "options": {},
         "children": [
-            "00da5e6d-2afb-4c77-8eec-28bb2f368080",
-            "9c2fffe9-8646-497e-98bc-e2b2719c8df3",
-            "c117d184-6407-4891-a0f4-f4111ed0a6f8",
+            "6df05248-0ed2-407a-ac93-56f5993fb158",
             "719c77b2-ccc8-4dbe-878e-a09a3b67cda4"
         ]
     },
@@ -19,14 +17,14 @@
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "You chose music...which song?...\nOne. Make A Man Out of You in Mulan...\nTwo. Never Gonna Give You Up by Rick Astley...",
+            "words": "You chose music...which song?...\nSay One for...Make A Man Out of You in Mulan...\nSay Two for...Never Gonna Give You Up by Rick Astley...",
             "onWord": [
                 "(word) => {",
                 "}"
             ]
         },
         "asset-pack": "core",
-        "parent": 1
+        "parent": "6df05248-0ed2-407a-ac93-56f5993fb158"
     },
     "f57a8416-c12d-4197-a689-3eeaccbfefef": {
         "id": "f57a8416-c12d-4197-a689-3eeaccbfefef",
@@ -175,7 +173,7 @@
             ]
         },
         "asset-pack": "core",
-        "parent": 1,
+        "parent": "6df05248-0ed2-407a-ac93-56f5993fb158",
         "decorators": [
             "b2079f4c-1e87-415a-9cf9-be9455000d34"
         ]
@@ -272,7 +270,7 @@
             "succeedOnOne": false
         },
         "asset-pack": "core",
-        "parent": 1,
+        "parent": "6df05248-0ed2-407a-ac93-56f5993fb158",
         "children": [
             "cf146fe1-70c6-4a7f-b5ad-054c5219055d",
             "f57a8416-c12d-4197-a689-3eeaccbfefef"
@@ -305,5 +303,18 @@
             ]
         },
         "asset-pack": "core"
+    },
+    "6df05248-0ed2-407a-ac93-56f5993fb158": {
+        "id": "6df05248-0ed2-407a-ac93-56f5993fb158",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": 1,
+        "children": [
+            "00da5e6d-2afb-4c77-8eec-28bb2f368080",
+            "9c2fffe9-8646-497e-98bc-e2b2719c8df3",
+            "c117d184-6407-4891-a0f4-f4111ed0a6f8"
+        ]
     }
 }
