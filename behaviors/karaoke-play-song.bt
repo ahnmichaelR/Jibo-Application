@@ -6,8 +6,8 @@
         "options": {},
         "children": [
             "00da5e6d-2afb-4c77-8eec-28bb2f368080",
-            "fcbbeffa-d26e-41b2-96c2-f2511fdf8a75",
-            "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0",
+            "53e5823b-1f04-45ec-a40c-841776e68c45",
+            "2195a631-7e40-4439-ae30-71fa3afa83e8",
             "fadcd6f2-bde6-498c-a5e8-700accaa1c1a"
         ]
     },
@@ -28,218 +28,6 @@
         "asset-pack": "core",
         "parent": 1
     },
-    "fe58e73f-63be-429b-8a81-68e77eea4b49": {
-        "id": "fe58e73f-63be-429b-8a81-68e77eea4b49",
-        "class": "Switch",
-        "name": "",
-        "options": {},
-        "asset-pack": "core",
-        "parent": "35503ff5-5dc8-46c1-a5e5-c90f851b5263",
-        "children": [
-            "09f72bb6-d1f6-4d34-afa9-79369b240bc6",
-            "c3004ad4-a205-4b34-b0ab-f853b796eed1"
-        ]
-    },
-    "a2d67d45-645e-444e-bf04-a7b10b3a9df1": {
-        "id": "a2d67d45-645e-444e-bf04-a7b10b3a9df1",
-        "class": "Case",
-        "name": "",
-        "options": {
-            "conditional": [
-                "() => {",
-                "  return notepad.whatNext == 'two'",
-                "}"
-            ]
-        },
-        "asset-pack": "core"
-    },
-    "c3004ad4-a205-4b34-b0ab-f853b796eed1": {
-        "id": "c3004ad4-a205-4b34-b0ab-f853b796eed1",
-        "class": "Sequence",
-        "name": "",
-        "options": {},
-        "asset-pack": "core",
-        "parent": "fe58e73f-63be-429b-8a81-68e77eea4b49",
-        "children": [
-            "64c86e5e-34bf-4e90-a5f7-32444a340b0f"
-        ],
-        "decorators": [
-            "a2d67d45-645e-444e-bf04-a7b10b3a9df1"
-        ]
-    },
-    "78cec0ee-ea8b-49a4-83cd-e5ae92cbed29": {
-        "id": "78cec0ee-ea8b-49a4-83cd-e5ae92cbed29",
-        "class": "Case",
-        "name": "",
-        "options": {
-            "conditional": [
-                "() => {",
-                "  return notepad.whatNext == 'one';",
-                "}"
-            ]
-        },
-        "asset-pack": "core"
-    },
-    "09f72bb6-d1f6-4d34-afa9-79369b240bc6": {
-        "id": "09f72bb6-d1f6-4d34-afa9-79369b240bc6",
-        "class": "Sequence",
-        "name": "",
-        "options": {},
-        "asset-pack": "core",
-        "parent": "fe58e73f-63be-429b-8a81-68e77eea4b49",
-        "children": [
-            "450809f9-010a-4a6f-9a84-e0a593876e5d"
-        ],
-        "decorators": [
-            "78cec0ee-ea8b-49a4-83cd-e5ae92cbed29"
-        ]
-    },
-    "450809f9-010a-4a6f-9a84-e0a593876e5d": {
-        "id": "450809f9-010a-4a6f-9a84-e0a593876e5d",
-        "class": "PlayAudio",
-        "name": "",
-        "options": {
-            "audioPath": "MakeAMan.mp3"
-        },
-        "asset-pack": "core",
-        "parent": "09f72bb6-d1f6-4d34-afa9-79369b240bc6",
-        "decorators": [
-            "de5ebaf5-e15b-4e2d-8c09-b8d4e28e9a56"
-        ]
-    },
-    "64c86e5e-34bf-4e90-a5f7-32444a340b0f": {
-        "id": "64c86e5e-34bf-4e90-a5f7-32444a340b0f",
-        "class": "PlayAudio",
-        "name": "",
-        "options": {
-            "audioPath": "Karaoke-Never-Gonna-Give-You-Up-Rick-Astley-.mp3"
-        },
-        "asset-pack": "core",
-        "parent": "c3004ad4-a205-4b34-b0ab-f853b796eed1",
-        "decorators": [
-            "2b872e4c-e3b7-4c8b-94f1-292f10b09d0a"
-        ]
-    },
-    "35503ff5-5dc8-46c1-a5e5-c90f851b5263": {
-        "id": "35503ff5-5dc8-46c1-a5e5-c90f851b5263",
-        "class": "Sequence",
-        "name": "",
-        "options": {},
-        "asset-pack": "core",
-        "parent": "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0",
-        "children": [
-            "fe58e73f-63be-429b-8a81-68e77eea4b49"
-        ],
-        "decorators": []
-    },
-    "4f9852bf-9df0-4623-bba6-7e752a7b739c": {
-        "id": "4f9852bf-9df0-4623-bba6-7e752a7b739c",
-        "class": "Sequence",
-        "name": "",
-        "options": {},
-        "asset-pack": "core",
-        "parent": "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0",
-        "children": [
-            "b963d37a-d46e-43f8-a70b-cfc37ab9726d"
-        ],
-        "decorators": [
-            "08b36dad-c6d6-4a11-8508-3bc0eb6a8d4f"
-        ]
-    },
-    "b963d37a-d46e-43f8-a70b-cfc37ab9726d": {
-        "id": "b963d37a-d46e-43f8-a70b-cfc37ab9726d",
-        "class": "Listen",
-        "name": "",
-        "options": {
-            "getOptions": [
-                "() => {",
-                "    let options = {",
-                "        heyJibo: false,",
-                "        detectEnd: false,",
-                "        incremental: false,",
-                "        authenticateSpeaker: ''",
-                "    }",
-                "    return options;",
-                "}"
-            ],
-            "rule": "stop.rule",
-            "onResult": [
-                "(listener) => {",
-                "    listener.on('cloud', function(asrResult, speakerIds) {",
-                "        notepad.whatNext = asrResult.NLParse.what;",
-                "    });",
-                "}"
-            ]
-        },
-        "asset-pack": "core",
-        "parent": "4f9852bf-9df0-4623-bba6-7e752a7b739c",
-        "decorators": []
-    },
-    "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0": {
-        "id": "e8d65f6d-5959-41e2-ab1f-8b7b8748d5d0",
-        "class": "Parallel",
-        "name": "",
-        "options": {
-            "succeedOnOne": false
-        },
-        "asset-pack": "core",
-        "parent": 1,
-        "children": [
-            "4f9852bf-9df0-4623-bba6-7e752a7b739c",
-            "35503ff5-5dc8-46c1-a5e5-c90f851b5263"
-        ]
-    },
-    "de5ebaf5-e15b-4e2d-8c09-b8d4e28e9a56": {
-        "id": "de5ebaf5-e15b-4e2d-8c09-b8d4e28e9a56",
-        "class": "SucceedOnCondition",
-        "name": "",
-        "options": {
-            "init": [
-                "() => {",
-                "}"
-            ],
-            "conditional": [
-                "() => {",
-                "    return notepad.whatNext == 'stop';",
-                "}"
-            ]
-        },
-        "asset-pack": "core"
-    },
-    "2b872e4c-e3b7-4c8b-94f1-292f10b09d0a": {
-        "id": "2b872e4c-e3b7-4c8b-94f1-292f10b09d0a",
-        "class": "SucceedOnCondition",
-        "name": "",
-        "options": {
-            "init": [
-                "() => {",
-                "}"
-            ],
-            "conditional": [
-                "() => {",
-                "  return notepad.whatNext == 'stop';",
-                "}"
-            ]
-        },
-        "asset-pack": "core"
-    },
-    "08b36dad-c6d6-4a11-8508-3bc0eb6a8d4f": {
-        "id": "08b36dad-c6d6-4a11-8508-3bc0eb6a8d4f",
-        "class": "WhileCondition",
-        "name": "",
-        "options": {
-            "init": [
-                "() => {",
-                "}"
-            ],
-            "conditional": [
-                "() => {",
-                "    return notepad.whatNext != 'stop';",
-                "}"
-            ]
-        },
-        "asset-pack": "core"
-    },
     "fadcd6f2-bde6-498c-a5e8-700accaa1c1a": {
         "id": "fadcd6f2-bde6-498c-a5e8-700accaa1c1a",
         "class": "Subtree",
@@ -259,8 +47,236 @@
         "asset-pack": "core",
         "parent": 1
     },
-    "fcbbeffa-d26e-41b2-96c2-f2511fdf8a75": {
-        "id": "fcbbeffa-d26e-41b2-96c2-f2511fdf8a75",
+    "2195a631-7e40-4439-ae30-71fa3afa83e8": {
+        "id": "2195a631-7e40-4439-ae30-71fa3afa83e8",
+        "class": "Parallel",
+        "name": "",
+        "options": {
+            "succeedOnOne": false
+        },
+        "asset-pack": "core",
+        "parent": 1,
+        "children": [
+            "eb452e75-d4cc-46fe-b027-fa5c45461010",
+            "04804657-838f-440f-8397-80da49bf8b40"
+        ]
+    },
+    "04804657-838f-440f-8397-80da49bf8b40": {
+        "id": "04804657-838f-440f-8397-80da49bf8b40",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "2195a631-7e40-4439-ae30-71fa3afa83e8",
+        "children": [
+            "10ea0742-de4f-4c72-89f6-2ecf189a2c04"
+        ],
+        "decorators": []
+    },
+    "10ea0742-de4f-4c72-89f6-2ecf189a2c04": {
+        "id": "10ea0742-de4f-4c72-89f6-2ecf189a2c04",
+        "class": "Switch",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "04804657-838f-440f-8397-80da49bf8b40",
+        "children": [
+            "a1c894d6-dafb-4177-bd6f-47d3b128d5ad",
+            "b3f8ec91-2c0b-4d38-8a53-ccfbda591215"
+        ]
+    },
+    "e4874f7d-a810-4e79-aec6-410aac3955ff": {
+        "id": "e4874f7d-a810-4e79-aec6-410aac3955ff",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'two'",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "b3f8ec91-2c0b-4d38-8a53-ccfbda591215": {
+        "id": "b3f8ec91-2c0b-4d38-8a53-ccfbda591215",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "10ea0742-de4f-4c72-89f6-2ecf189a2c04",
+        "children": [
+            "ca3c39ad-4532-4ac7-a8fe-a81d915a493b"
+        ],
+        "decorators": [
+            "e4874f7d-a810-4e79-aec6-410aac3955ff"
+        ]
+    },
+    "dc2b249d-7edc-4cf5-91af-a39ff53df278": {
+        "id": "dc2b249d-7edc-4cf5-91af-a39ff53df278",
+        "class": "SucceedOnCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "  return notepad.nextStop == 'stop';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "ca3c39ad-4532-4ac7-a8fe-a81d915a493b": {
+        "id": "ca3c39ad-4532-4ac7-a8fe-a81d915a493b",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "Karaoke-Never-Gonna-Give-You-Up-Rick-Astley-.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "b3f8ec91-2c0b-4d38-8a53-ccfbda591215",
+        "decorators": [
+            "dc2b249d-7edc-4cf5-91af-a39ff53df278"
+        ]
+    },
+    "39a87fe6-289f-4db2-8bda-f413fdc0be3b": {
+        "id": "39a87fe6-289f-4db2-8bda-f413fdc0be3b",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'one';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "a1c894d6-dafb-4177-bd6f-47d3b128d5ad": {
+        "id": "a1c894d6-dafb-4177-bd6f-47d3b128d5ad",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "10ea0742-de4f-4c72-89f6-2ecf189a2c04",
+        "children": [
+            "3cb9e902-47a4-4dde-8126-e92112beda9c"
+        ],
+        "decorators": [
+            "39a87fe6-289f-4db2-8bda-f413fdc0be3b"
+        ]
+    },
+    "a1001403-db55-4f3e-8123-dfde2af2c0b8": {
+        "id": "a1001403-db55-4f3e-8123-dfde2af2c0b8",
+        "class": "SucceedOnCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "  return notepad.nextStop == 'stop';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "3cb9e902-47a4-4dde-8126-e92112beda9c": {
+        "id": "3cb9e902-47a4-4dde-8126-e92112beda9c",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "MakeAMan.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "a1c894d6-dafb-4177-bd6f-47d3b128d5ad",
+        "decorators": [
+            "a1001403-db55-4f3e-8123-dfde2af2c0b8"
+        ]
+    },
+    "eb452e75-d4cc-46fe-b027-fa5c45461010": {
+        "id": "eb452e75-d4cc-46fe-b027-fa5c45461010",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "2195a631-7e40-4439-ae30-71fa3afa83e8",
+        "children": [
+            "3e9e04d8-a293-4b02-9b5e-cbad94987e0f"
+        ]
+    },
+    "5f9295ab-468d-455f-813e-71d146a10332": {
+        "id": "5f9295ab-468d-455f-813e-71d146a10332",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "    return notepad.nextStop != 'stop';",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "3e9e04d8-a293-4b02-9b5e-cbad94987e0f": {
+        "id": "3e9e04d8-a293-4b02-9b5e-cbad94987e0f",
+        "class": "Listen",
+        "name": "",
+        "options": {
+            "getOptions": [
+                "() => {",
+                "    let options = {",
+                "        heyJibo: false,",
+                "        detectEnd: false,",
+                "        incremental: false,",
+                "        authenticateSpeaker: ''",
+                "    }",
+                "    return options;",
+                "}"
+            ],
+            "rule": "stop.rule",
+            "onResult": [
+                "(listener) => {",
+                "    listener.on('cloud', function(asrResult, speakerIds) {",
+                "      notepad.nextStop = asrResult.NLParse.what;",
+                "    });",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "eb452e75-d4cc-46fe-b027-fa5c45461010",
+        "decorators": [
+            "5f9295ab-468d-455f-813e-71d146a10332"
+        ]
+    },
+    "b3ae1fd1-bb79-4e1c-a361-45b9de33f38d": {
+        "id": "b3ae1fd1-bb79-4e1c-a361-45b9de33f38d",
+        "class": "WhileCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "    return !(notepad.whatNext == 'one'|notepad.whatNext == 'two');",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "53e5823b-1f04-45ec-a40c-841776e68c45": {
+        "id": "53e5823b-1f04-45ec-a40c-841776e68c45",
         "class": "Listen",
         "name": "",
         "options": {
@@ -287,24 +303,7 @@
         "asset-pack": "core",
         "parent": 1,
         "decorators": [
-            "dcdb15a9-376f-4bad-b973-1ca7d89c23fe"
+            "b3ae1fd1-bb79-4e1c-a361-45b9de33f38d"
         ]
-    },
-    "dcdb15a9-376f-4bad-b973-1ca7d89c23fe": {
-        "id": "dcdb15a9-376f-4bad-b973-1ca7d89c23fe",
-        "class": "WhileCondition",
-        "name": "",
-        "options": {
-            "init": [
-                "() => {",
-                "}"
-            ],
-            "conditional": [
-                "() => {",
-                "    return !(notepad.whatNext == 'one'|notepad.whatNext == 'two');",
-                "}"
-            ]
-        },
-        "asset-pack": "core"
     }
 }

@@ -1,5 +1,4 @@
-TopRule = jibo $*
+TopRule = $*
 stop {what = 'stop'}|
-pause {what = 'pause'}|
 $* {what = 'undefined'}
 $*;
