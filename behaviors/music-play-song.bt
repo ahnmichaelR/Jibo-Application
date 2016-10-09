@@ -5,7 +5,9 @@
         "name": "",
         "options": {},
         "children": [
-            "6df05248-0ed2-407a-ac93-56f5993fb158",
+            "00da5e6d-2afb-4c77-8eec-28bb2f368080",
+            "9c2fffe9-8646-497e-98bc-e2b2719c8df3",
+            "c117d184-6407-4891-a0f4-f4111ed0a6f8",
             "719c77b2-ccc8-4dbe-878e-a09a3b67cda4"
         ]
     },
@@ -17,14 +19,14 @@
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "You chose music...which song?...\nSay One for...Make A Man Out of You in Mulan...\nSay Two for...Never Gonna Give You Up by Rick Astley...",
+            "words": "You chose music...which song?...\nOne. Make A Man Out of You in Mulan...\nTwo. Never Gonna Give You Up by Rick Astley...\nThree. Closer by The Chainsmokers...\nFour. Let Me Love You by DJ Snake featuring Justin Bieber...",
             "onWord": [
                 "(word) => {",
                 "}"
             ]
         },
         "asset-pack": "core",
-        "parent": "6df05248-0ed2-407a-ac93-56f5993fb158"
+        "parent": 1
     },
     "f57a8416-c12d-4197-a689-3eeaccbfefef": {
         "id": "f57a8416-c12d-4197-a689-3eeaccbfefef",
@@ -47,7 +49,9 @@
         "parent": "f57a8416-c12d-4197-a689-3eeaccbfefef",
         "children": [
             "86a54133-7cac-4b40-93e1-5541a48a7ca0",
-            "07715210-2aed-47ed-b5ae-37e12cb9cd10"
+            "07715210-2aed-47ed-b5ae-37e12cb9cd10",
+            "9d96a0ae-ee0c-49f8-8eff-996c5323b606",
+            "1913a164-f6de-4336-9794-04b9eef7b647"
         ]
     },
     "e494cbaa-9be5-4003-a456-6da2e4644ae8": {
@@ -173,7 +177,7 @@
             ]
         },
         "asset-pack": "core",
-        "parent": "6df05248-0ed2-407a-ac93-56f5993fb158",
+        "parent": 1,
         "decorators": [
             "b2079f4c-1e87-415a-9cf9-be9455000d34"
         ]
@@ -270,7 +274,7 @@
             "succeedOnOne": false
         },
         "asset-pack": "core",
-        "parent": "6df05248-0ed2-407a-ac93-56f5993fb158",
+        "parent": 1,
         "children": [
             "cf146fe1-70c6-4a7f-b5ad-054c5219055d",
             "f57a8416-c12d-4197-a689-3eeaccbfefef"
@@ -304,17 +308,116 @@
         },
         "asset-pack": "core"
     },
-    "6df05248-0ed2-407a-ac93-56f5993fb158": {
-        "id": "6df05248-0ed2-407a-ac93-56f5993fb158",
+    "b4ba1cf3-0849-4dfc-980e-317310ef1996": {
+        "id": "b4ba1cf3-0849-4dfc-980e-317310ef1996",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'three'",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "9d96a0ae-ee0c-49f8-8eff-996c5323b606": {
+        "id": "9d96a0ae-ee0c-49f8-8eff-996c5323b606",
         "class": "Sequence",
         "name": "",
         "options": {},
         "asset-pack": "core",
-        "parent": 1,
+        "parent": "34e0cbd1-a6e6-44cb-90fc-e953b9e124aa",
+        "decorators": [
+            "b4ba1cf3-0849-4dfc-980e-317310ef1996"
+        ],
         "children": [
-            "00da5e6d-2afb-4c77-8eec-28bb2f368080",
-            "9c2fffe9-8646-497e-98bc-e2b2719c8df3",
-            "c117d184-6407-4891-a0f4-f4111ed0a6f8"
+            "9870c195-569e-43cd-8d26-9022ee9790eb"
+        ]
+    },
+    "e03c71f2-914a-4cf4-a8f1-e005286b6cff": {
+        "id": "e03c71f2-914a-4cf4-a8f1-e005286b6cff",
+        "class": "SucceedOnCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "9870c195-569e-43cd-8d26-9022ee9790eb": {
+        "id": "9870c195-569e-43cd-8d26-9022ee9790eb",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "The-Chainsmokers-feat.-Halsey-Closer-Lyrics.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "9d96a0ae-ee0c-49f8-8eff-996c5323b606",
+        "decorators": [
+            "e03c71f2-914a-4cf4-a8f1-e005286b6cff"
+        ]
+    },
+    "aa14dfc2-52f6-4fb3-8ca7-41c438dd5b1f": {
+        "id": "aa14dfc2-52f6-4fb3-8ca7-41c438dd5b1f",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'four'",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "1913a164-f6de-4336-9794-04b9eef7b647": {
+        "id": "1913a164-f6de-4336-9794-04b9eef7b647",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "34e0cbd1-a6e6-44cb-90fc-e953b9e124aa",
+        "decorators": [
+            "aa14dfc2-52f6-4fb3-8ca7-41c438dd5b1f"
+        ],
+        "children": [
+            "c1abead7-ab72-42cd-a899-4f14302ae007"
+        ]
+    },
+    "95761db3-9220-4898-b723-5896abcab368": {
+        "id": "95761db3-9220-4898-b723-5896abcab368",
+        "class": "SucceedOnCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "c1abead7-ab72-42cd-a899-4f14302ae007": {
+        "id": "c1abead7-ab72-42cd-a899-4f14302ae007",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "DJ-Snake-ft.-Justin-Bieber-Let-Me-Love-You-Lyric-Video.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "1913a164-f6de-4336-9794-04b9eef7b647",
+        "decorators": [
+            "95761db3-9220-4898-b723-5896abcab368"
         ]
     }
 }

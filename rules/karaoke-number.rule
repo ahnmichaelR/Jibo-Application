@@ -3,6 +3,9 @@ one {what = 'one'}|
 (make a man out of you) {what = 'one'}|
 two {what = 'two'}|
 (never gonna give you up) {what = 'two'}|
-random {what = 'random'}|
+three {what = 'three'}|
+closer {what = 'three'}|
+four {what = 'four'}|
+(let me love you) {what = 'four'}|
 $* {what = 'undefined'}
  $*;

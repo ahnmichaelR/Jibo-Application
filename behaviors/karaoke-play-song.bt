@@ -19,7 +19,7 @@
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "You chose karaoke...which song?... \nSay One for...Make A Man Out of You in Mulan...\nSay Two for...Never Gonna Give You Up by Rick Astley...",
+            "words": "You chose karaoke...which song?... \nOne. Make A Man Out of You in Mulan...\nTwo. Never Gonna Give You Up by Rick Astley...\nThree. Closer by The Chainsmokers...\nFour. Let Me Love You by DJ Snake featuring Justin Bieber...",
             "onWord": [
                 "(word) => {",
                 "}"
@@ -82,7 +82,9 @@
         "parent": "04804657-838f-440f-8397-80da49bf8b40",
         "children": [
             "a1c894d6-dafb-4177-bd6f-47d3b128d5ad",
-            "b3f8ec91-2c0b-4d38-8a53-ccfbda591215"
+            "b3f8ec91-2c0b-4d38-8a53-ccfbda591215",
+            "62e054b0-84b2-4ad2-a2cd-0f51d18cf82a",
+            "16ff0834-29b6-4103-a244-d21b91f182c0"
         ]
     },
     "e4874f7d-a810-4e79-aec6-410aac3955ff": {
@@ -305,5 +307,117 @@
         "decorators": [
             "b3ae1fd1-bb79-4e1c-a361-45b9de33f38d"
         ]
+    },
+    "62e054b0-84b2-4ad2-a2cd-0f51d18cf82a": {
+        "id": "62e054b0-84b2-4ad2-a2cd-0f51d18cf82a",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "10ea0742-de4f-4c72-89f6-2ecf189a2c04",
+        "decorators": [
+            "fb8c8c85-93f0-4844-a8b5-f0bcba3fb767"
+        ],
+        "children": [
+            "dd4df8aa-1dbb-4b36-90f3-05587f35afd3"
+        ]
+    },
+    "fb8c8c85-93f0-4844-a8b5-f0bcba3fb767": {
+        "id": "fb8c8c85-93f0-4844-a8b5-f0bcba3fb767",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'three'",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "dd4df8aa-1dbb-4b36-90f3-05587f35afd3": {
+        "id": "dd4df8aa-1dbb-4b36-90f3-05587f35afd3",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "The-Chainsmokers-Closer-ft.-Halsey-_-Official-Karaoke-Instrumental-Lyrics-Cove (2).mp3"
+        },
+        "asset-pack": "core",
+        "parent": "62e054b0-84b2-4ad2-a2cd-0f51d18cf82a",
+        "decorators": [
+            "cd372be8-eee9-4336-b301-b3608e857c65"
+        ]
+    },
+    "cd372be8-eee9-4336-b301-b3608e857c65": {
+        "id": "cd372be8-eee9-4336-b301-b3608e857c65",
+        "class": "SucceedOnCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "16ff0834-29b6-4103-a244-d21b91f182c0": {
+        "id": "16ff0834-29b6-4103-a244-d21b91f182c0",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "10ea0742-de4f-4c72-89f6-2ecf189a2c04",
+        "decorators": [
+            "e861d002-9bbd-4165-8f5d-ccbd26625ac1"
+        ],
+        "children": [
+            "33438520-c69a-4e4a-b31a-92146f133226"
+        ]
+    },
+    "e861d002-9bbd-4165-8f5d-ccbd26625ac1": {
+        "id": "e861d002-9bbd-4165-8f5d-ccbd26625ac1",
+        "class": "Case",
+        "name": "",
+        "options": {
+            "conditional": [
+                "() => {",
+                "  return notepad.whatNext == 'four'",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "33438520-c69a-4e4a-b31a-92146f133226": {
+        "id": "33438520-c69a-4e4a-b31a-92146f133226",
+        "class": "PlayAudio",
+        "name": "",
+        "options": {
+            "audioPath": "DJ-Snake-Let-Me-Love-You-feat.-Justin-Bieber-_-Official-Karaoke-Instrumental.mp3"
+        },
+        "asset-pack": "core",
+        "parent": "16ff0834-29b6-4103-a244-d21b91f182c0",
+        "decorators": [
+            "1d262854-a87b-452b-aec3-10dac3633e41"
+        ]
+    },
+    "1d262854-a87b-452b-aec3-10dac3633e41": {
+        "id": "1d262854-a87b-452b-aec3-10dac3633e41",
+        "class": "SucceedOnCondition",
+        "name": "",
+        "options": {
+            "init": [
+                "() => {",
+                "}"
+            ],
+            "conditional": [
+                "() => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
     }
 }
