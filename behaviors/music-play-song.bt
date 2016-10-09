@@ -5,9 +5,7 @@
         "name": "",
         "options": {},
         "children": [
-            "00da5e6d-2afb-4c77-8eec-28bb2f368080",
-            "9c2fffe9-8646-497e-98bc-e2b2719c8df3",
-            "c117d184-6407-4891-a0f4-f4111ed0a6f8",
+            "6df05248-0ed2-407a-ac93-56f5993fb158",
             "719c77b2-ccc8-4dbe-878e-a09a3b67cda4"
         ]
     },
@@ -19,14 +17,14 @@
         "class": "TextToSpeech",
         "name": "",
         "options": {
-            "words": "You chose music...which song?...\nOne. Make A Man Out of You in Mulan...\nTwo. Never Gonna Give You Up by Rick Astley...\nThree. Closer by The Chainsmokers...\nFour. Let Me Love You by DJ Snake featuring Justin Bieber...",
+            "words": "You chose music...which song?...\nSay One for...Make A Man Out of You in Mulan...\nSay Two for...Never Gonna Give You Up by Rick Astley...\nSay Three for...Closer by The Chainsmokers\nSay Four for...Let me love you by JB",
             "onWord": [
                 "(word) => {",
                 "}"
             ]
         },
         "asset-pack": "core",
-        "parent": 1
+        "parent": "6df05248-0ed2-407a-ac93-56f5993fb158"
     },
     "f57a8416-c12d-4197-a689-3eeaccbfefef": {
         "id": "f57a8416-c12d-4197-a689-3eeaccbfefef",
@@ -48,10 +46,10 @@
         "asset-pack": "core",
         "parent": "f57a8416-c12d-4197-a689-3eeaccbfefef",
         "children": [
+            "b46cf9f9-7353-4d75-8dd5-62aaa1390c86",
+            "b2989da3-8f07-4ae6-8b1c-39f374a043ea",
             "86a54133-7cac-4b40-93e1-5541a48a7ca0",
-            "07715210-2aed-47ed-b5ae-37e12cb9cd10",
-            "9d96a0ae-ee0c-49f8-8eff-996c5323b606",
-            "1913a164-f6de-4336-9794-04b9eef7b647"
+            "07715210-2aed-47ed-b5ae-37e12cb9cd10"
         ]
     },
     "e494cbaa-9be5-4003-a456-6da2e4644ae8": {
@@ -145,7 +143,8 @@
             ],
             "conditional": [
                 "() => {",
-                "    return !(notepad.whatNext == 'one'|notepad.whatNext == 'two');",
+                "    return !(notepad.whatNext == 'one'|notepad.whatNext == 'two'|",
+                "      notepad.whatNext == 'three'|notepad.whatNext == 'four');",
                 "}"
             ]
         },
@@ -177,7 +176,7 @@
             ]
         },
         "asset-pack": "core",
-        "parent": 1,
+        "parent": "6df05248-0ed2-407a-ac93-56f5993fb158",
         "decorators": [
             "b2079f4c-1e87-415a-9cf9-be9455000d34"
         ]
@@ -274,7 +273,7 @@
             "succeedOnOne": false
         },
         "asset-pack": "core",
-        "parent": 1,
+        "parent": "6df05248-0ed2-407a-ac93-56f5993fb158",
         "children": [
             "cf146fe1-70c6-4a7f-b5ad-054c5219055d",
             "f57a8416-c12d-4197-a689-3eeaccbfefef"
@@ -308,8 +307,21 @@
         },
         "asset-pack": "core"
     },
-    "b4ba1cf3-0849-4dfc-980e-317310ef1996": {
-        "id": "b4ba1cf3-0849-4dfc-980e-317310ef1996",
+    "6df05248-0ed2-407a-ac93-56f5993fb158": {
+        "id": "6df05248-0ed2-407a-ac93-56f5993fb158",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": 1,
+        "children": [
+            "00da5e6d-2afb-4c77-8eec-28bb2f368080",
+            "9c2fffe9-8646-497e-98bc-e2b2719c8df3",
+            "c117d184-6407-4891-a0f4-f4111ed0a6f8"
+        ]
+    },
+    "bb9d4093-3f07-4335-86c9-b134e82c60dc": {
+        "id": "bb9d4093-3f07-4335-86c9-b134e82c60dc",
         "class": "Case",
         "name": "",
         "options": {
@@ -321,22 +333,22 @@
         },
         "asset-pack": "core"
     },
-    "9d96a0ae-ee0c-49f8-8eff-996c5323b606": {
-        "id": "9d96a0ae-ee0c-49f8-8eff-996c5323b606",
+    "b2989da3-8f07-4ae6-8b1c-39f374a043ea": {
+        "id": "b2989da3-8f07-4ae6-8b1c-39f374a043ea",
         "class": "Sequence",
         "name": "",
         "options": {},
         "asset-pack": "core",
         "parent": "34e0cbd1-a6e6-44cb-90fc-e953b9e124aa",
-        "decorators": [
-            "b4ba1cf3-0849-4dfc-980e-317310ef1996"
-        ],
         "children": [
-            "9870c195-569e-43cd-8d26-9022ee9790eb"
+            "b9a48c9a-f8a7-496f-9049-4534b319ddcc"
+        ],
+        "decorators": [
+            "bb9d4093-3f07-4335-86c9-b134e82c60dc"
         ]
     },
-    "e03c71f2-914a-4cf4-a8f1-e005286b6cff": {
-        "id": "e03c71f2-914a-4cf4-a8f1-e005286b6cff",
+    "b5b894d4-079f-40a7-8bdf-ac09ee34cd84": {
+        "id": "b5b894d4-079f-40a7-8bdf-ac09ee34cd84",
         "class": "SucceedOnCondition",
         "name": "",
         "options": {
@@ -346,26 +358,27 @@
             ],
             "conditional": [
                 "() => {",
+                "  return notepad.nextStop == 'stop';",
                 "}"
             ]
         },
         "asset-pack": "core"
     },
-    "9870c195-569e-43cd-8d26-9022ee9790eb": {
-        "id": "9870c195-569e-43cd-8d26-9022ee9790eb",
+    "b9a48c9a-f8a7-496f-9049-4534b319ddcc": {
+        "id": "b9a48c9a-f8a7-496f-9049-4534b319ddcc",
         "class": "PlayAudio",
         "name": "",
         "options": {
             "audioPath": "The-Chainsmokers-feat.-Halsey-Closer-Lyrics.mp3"
         },
         "asset-pack": "core",
-        "parent": "9d96a0ae-ee0c-49f8-8eff-996c5323b606",
+        "parent": "b2989da3-8f07-4ae6-8b1c-39f374a043ea",
         "decorators": [
-            "e03c71f2-914a-4cf4-a8f1-e005286b6cff"
+            "b5b894d4-079f-40a7-8bdf-ac09ee34cd84"
         ]
     },
-    "aa14dfc2-52f6-4fb3-8ca7-41c438dd5b1f": {
-        "id": "aa14dfc2-52f6-4fb3-8ca7-41c438dd5b1f",
+    "64e11273-322b-4884-b1db-256ad9fe430e": {
+        "id": "64e11273-322b-4884-b1db-256ad9fe430e",
         "class": "Case",
         "name": "",
         "options": {
@@ -377,22 +390,22 @@
         },
         "asset-pack": "core"
     },
-    "1913a164-f6de-4336-9794-04b9eef7b647": {
-        "id": "1913a164-f6de-4336-9794-04b9eef7b647",
+    "b46cf9f9-7353-4d75-8dd5-62aaa1390c86": {
+        "id": "b46cf9f9-7353-4d75-8dd5-62aaa1390c86",
         "class": "Sequence",
         "name": "",
         "options": {},
         "asset-pack": "core",
         "parent": "34e0cbd1-a6e6-44cb-90fc-e953b9e124aa",
-        "decorators": [
-            "aa14dfc2-52f6-4fb3-8ca7-41c438dd5b1f"
-        ],
         "children": [
-            "c1abead7-ab72-42cd-a899-4f14302ae007"
+            "67539230-1ddf-4c40-a038-027ac17eda07"
+        ],
+        "decorators": [
+            "64e11273-322b-4884-b1db-256ad9fe430e"
         ]
     },
-    "95761db3-9220-4898-b723-5896abcab368": {
-        "id": "95761db3-9220-4898-b723-5896abcab368",
+    "c1474e0c-170f-42bb-b39e-cbc4940b4722": {
+        "id": "c1474e0c-170f-42bb-b39e-cbc4940b4722",
         "class": "SucceedOnCondition",
         "name": "",
         "options": {
@@ -402,22 +415,23 @@
             ],
             "conditional": [
                 "() => {",
+                "  return notepad.nextStop == 'stop';",
                 "}"
             ]
         },
         "asset-pack": "core"
     },
-    "c1abead7-ab72-42cd-a899-4f14302ae007": {
-        "id": "c1abead7-ab72-42cd-a899-4f14302ae007",
+    "67539230-1ddf-4c40-a038-027ac17eda07": {
+        "id": "67539230-1ddf-4c40-a038-027ac17eda07",
         "class": "PlayAudio",
         "name": "",
         "options": {
             "audioPath": "DJ-Snake-ft.-Justin-Bieber-Let-Me-Love-You-Lyric-Video.mp3"
         },
         "asset-pack": "core",
-        "parent": "1913a164-f6de-4336-9794-04b9eef7b647",
+        "parent": "b46cf9f9-7353-4d75-8dd5-62aaa1390c86",
         "decorators": [
-            "95761db3-9220-4898-b723-5896abcab368"
+            "c1474e0c-170f-42bb-b39e-cbc4940b4722"
         ]
     }
 }

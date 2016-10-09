@@ -271,7 +271,8 @@
             ],
             "conditional": [
                 "() => {",
-                "    return !(notepad.whatNext == 'one'|notepad.whatNext == 'two');",
+                "  return !(notepad.whatNext == 'one'|notepad.whatNext == 'two'",
+                "  |notepad.whatNext == 'three'|notepad.whatNext == 'four');",
                 "}"
             ]
         },
