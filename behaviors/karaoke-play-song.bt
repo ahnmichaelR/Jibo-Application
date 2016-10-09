@@ -340,7 +340,7 @@
         "class": "PlayAudio",
         "name": "",
         "options": {
-            "audioPath": "The-Chainsmokers-Closer-ft.-Halsey-_-Official-Karaoke-Instrumental-Lyrics-Cove (2).mp3"
+            "audioPath": "closer-karaoke.mp3"
         },
         "asset-pack": "core",
         "parent": "62e054b0-84b2-4ad2-a2cd-0f51d18cf82a",
